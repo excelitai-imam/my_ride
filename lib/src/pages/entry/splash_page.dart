@@ -12,7 +12,7 @@ class _SplashPageState extends State<SplashPage> with TickerProviderStateMixin {
   @override
   void initState() {
     super.initState();
-    Timer(const Duration(seconds: 6), () {
+    Timer(const Duration(seconds: 2), () {
       _controller = AnimationController(vsync: this);
       Navigator.pushReplacementNamed(context, kRouteIntro);
     });

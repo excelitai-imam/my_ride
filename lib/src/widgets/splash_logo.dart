@@ -24,8 +24,9 @@ class _SplashLogoState extends State<SplashLogo> {
           //   //width: 250.w,
           // ),
           // Lottie.asset('assets/data.json'),
-          Lottie.network(
-              'https://assets2.lottiefiles.com/packages/lf20_jowhefc2/new car riding animation svg/data.json'),
+
+          // Lottie.network(
+          //     'https://assets2.lottiefiles.com/packages/lf20_jowhefc2/new car riding animation svg/data.json'),
 
           Text.rich(
             TextSpan(

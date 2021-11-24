@@ -39,7 +39,11 @@ class _IntroPageState extends State<IntroPage>
                   SizedBox(
                     height: 150.h,
                   ),
-                  Image.asset(
+                  // Image.asset(
+                  //   _data[index].imagePath!,
+                  //   height: 1000.h,
+                  // ),
+                  Lottie.network(
                     _data[index].imagePath!,
                     height: 1000.h,
                   ),

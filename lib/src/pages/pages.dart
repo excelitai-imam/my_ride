@@ -6,6 +6,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:flutter_slider_indicator/flutter_slider_indicator.dart';
+import 'package:lottie/lottie.dart';
 //import 'package:lottie/lottie.dart';
 import 'package:my_ride/constants.dart';
 import 'package:my_ride/src/models/models.dart';
