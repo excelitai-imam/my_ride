@@ -1,13 +1,13 @@
 part of pages;
 
-class OtpVerificationPage extends StatefulWidget {
-  const OtpVerificationPage({Key? key}) : super(key: key);
+class ResetpassOtpPage extends StatefulWidget {
+  const ResetpassOtpPage({Key? key}) : super(key: key);
 
   @override
-  State<OtpVerificationPage> createState() => _OtpVerificationPageState();
+  State<ResetpassOtpPage> createState() => _ResetpassOtpPageState();
 }
 
-class _OtpVerificationPageState extends State<OtpVerificationPage> {
+class _ResetpassOtpPageState extends State<ResetpassOtpPage> {
   FocusNode focusNode1 = FocusNode();
   FocusNode focusNode2 = FocusNode();
   FocusNode focusNode3 = FocusNode();

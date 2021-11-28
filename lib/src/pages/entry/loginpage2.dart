@@ -117,7 +117,7 @@ class LoginPage2 extends StatelessWidget {
       //     ),
       //   ),
       // ),
-      body: OtpVerificationPage(),
+      body: LoginOtpPage(),
     );
   }
 }

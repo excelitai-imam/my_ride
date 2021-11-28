@@ -1,7 +1,7 @@
 part of pages;
 
-class LoginPage1 extends StatelessWidget {
-  const LoginPage1({Key? key}) : super(key: key);
+class RegisterPage1 extends StatelessWidget {
+  const RegisterPage1({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -18,8 +18,8 @@ class LoginPage1 extends StatelessWidget {
                   mainAxisAlignment: MainAxisAlignment.spaceBetween,
                   children: [
                     const LoginRegistrationHeader(
-                      title: 'Login Account',
-                      subTitle: 'Hello, Welcome back to your account',
+                      title: 'Create an Account',
+                      subTitle: 'Hello, Welcome to Ei Khali',
                     ),
                     Row(
                       children: const [
@@ -36,7 +36,7 @@ class LoginPage1 extends StatelessWidget {
                   keyboardType: TextInputType.emailAddress,
                   decoration: InputDecoration(
                     prefixIcon: Icon(Icons.arrow_drop_down),
-                    labelText: '+880 Enter your number',
+                    labelText: '+880  Enter your number',
                     isCollapsed: true,
                   ),
                 ),
@@ -57,7 +57,7 @@ class LoginPage1 extends StatelessWidget {
                     //     builder: (context) => const kRouteLogin2,
                     //   ),
                     // );
-                    Navigator.pushReplacementNamed(context, kRouteLogin2);
+                    Navigator.pushReplacementNamed(context, kRouteRegister2);
                   },
                   child: const Text("Next"),
                 ),
@@ -87,6 +87,16 @@ class LoginPage1 extends StatelessWidget {
                 SizedBox(height: kVerticalPadding),
                 ElevatedButton.icon(
                   onPressed: () {},
+                  icon: const Icon(FontAwesomeIcons.googlePlusG),
+                  label: const Text('Google'),
+                  style: ElevatedButton.styleFrom(
+                    primary: const Color(0xffdb4a39),
+                    padding: EdgeInsets.all(kButtonIconPadding),
+                  ),
+                ),
+                SizedBox(height: kVerticalPadding),
+                ElevatedButton.icon(
+                  onPressed: () {},
                   icon: const Icon(FontAwesomeIcons.facebookF),
                   label: const Text('Facebook'),
                   style: ElevatedButton.styleFrom(
@@ -112,22 +122,13 @@ class LoginPage1 extends StatelessWidget {
                 //     ],
                 //   ),
                 // ),
-                SizedBox(height: kVerticalPadding),
-                ElevatedButton.icon(
-                  onPressed: () {},
-                  icon: const Icon(FontAwesomeIcons.googlePlusG),
-                  label: const Text('Google'),
-                  style: ElevatedButton.styleFrom(
-                    primary: const Color(0xffdb4a39),
-                    padding: EdgeInsets.all(kButtonIconPadding),
-                  ),
-                ),
+
                 const Expanded(child: SizedBox.shrink()),
                 LoginRegisterFooter(
-                  question: 'Not registered yet?',
-                  actionText: ' Create an Account',
+                  question: 'Already have an account?',
+                  actionText: '  Log in',
                   action: () {
-                    Navigator.pushReplacementNamed(context, kRouteRegister1);
+                    Navigator.pushReplacementNamed(context, kRouteLogin1);
                   },
                 ),
                 SizedBox(height: kVerticalPadding),
