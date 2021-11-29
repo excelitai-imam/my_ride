@@ -13,14 +13,30 @@ class LoginPage1 extends StatelessWidget {
           child: Padding(
             padding: const EdgeInsets.all(8.0),
             child: Column(
+              mainAxisAlignment: MainAxisAlignment.start,
               children: [
                 Row(
                   mainAxisAlignment: MainAxisAlignment.spaceBetween,
                   children: [
                     const LoginRegistrationHeader(
+                      centerText: false,
                       title: 'Login Account',
                       subTitle: 'Hello, Welcome back to your account',
                     ),
+                    // Column(
+                    //   children: [
+                    //     Row(
+                    //       children: const [
+                    //         Text('data'),
+                    //       ],
+                    //     ),
+                    //     Row(
+                    //       children: const [
+                    //         Text('data'),
+                    //       ],
+                    //     )
+                    //   ],
+                    // ),
                     Row(
                       children: const [
                         CircleAvatar(
@@ -36,6 +52,7 @@ class LoginPage1 extends StatelessWidget {
                   keyboardType: TextInputType.emailAddress,
                   decoration: InputDecoration(
                     prefixIcon: Icon(Icons.arrow_drop_down),
+                    suffixIcon: Icon(Icons.check_box_rounded),
                     labelText: '+880 Enter your number',
                     isCollapsed: true,
                   ),
@@ -77,7 +94,7 @@ class LoginPage1 extends StatelessWidget {
                 //         ),
                 //   ),
                 // ),
-                SizedBox(height: kVerticalPadding * 2),
+                //SizedBox(height: kVerticalPadding * 2),
                 Text(
                   "Signin with social media",
                   style: Theme.of(context).textTheme.subtitle1!.copyWith(
@@ -87,10 +104,12 @@ class LoginPage1 extends StatelessWidget {
                 SizedBox(height: kVerticalPadding),
                 ElevatedButton.icon(
                   onPressed: () {},
-                  icon: const Icon(FontAwesomeIcons.facebookF),
+                  icon: const Icon(
+                    FontAwesomeIcons.facebookF,
+                  ),
                   label: const Text('Facebook'),
                   style: ElevatedButton.styleFrom(
-                    primary: const Color(0xff3b5998),
+                    primary: const Color(0xff03b6fc),
                     padding: EdgeInsets.all(kButtonIconPadding),
                   ),
                 ),
@@ -115,10 +134,16 @@ class LoginPage1 extends StatelessWidget {
                 SizedBox(height: kVerticalPadding),
                 ElevatedButton.icon(
                   onPressed: () {},
-                  icon: const Icon(FontAwesomeIcons.googlePlusG),
-                  label: const Text('Google'),
+                  icon: const Icon(
+                    FontAwesomeIcons.googlePlusSquare,
+                    //color: Colors.black,
+                  ),
+                  label: const Text(
+                    'Google',
+                    style: TextStyle(color: Colors.black),
+                  ),
                   style: ElevatedButton.styleFrom(
-                    primary: const Color(0xffdb4a39),
+                    primary: const Color(0xfff7faf9),
                     padding: EdgeInsets.all(kButtonIconPadding),
                   ),
                 ),

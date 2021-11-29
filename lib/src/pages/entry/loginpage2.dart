@@ -16,8 +16,10 @@ class LoginPage2 extends StatelessWidget {
               children: [
                 Row(
                   mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                  // crossAxisAlignment: CrossAxisAlignment.,
                   children: [
                     const LoginRegistrationHeader(
+                      centerText: false,
                       title: 'Login Account',
                       subTitle: 'Hello, Welcome back to your account',
                     ),
