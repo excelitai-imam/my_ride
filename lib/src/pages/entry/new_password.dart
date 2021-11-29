@@ -21,7 +21,7 @@ class NewPasswordPage extends StatelessWidget {
             const LoginRegistrationHeader(
               centerText: true,
               title: "New Password",
-              subTitle: "Please enter your password",
+              subTitle: "Enter new password",
             ),
             SizedBox(height: kVerticalPadding),
             TextFormField(
@@ -44,7 +44,7 @@ class NewPasswordPage extends StatelessWidget {
             SizedBox(height: kVerticalPadding),
             ElevatedButton(
               onPressed: () {},
-              child: const Text("Next"),
+              child: const Text("Save"),
             ),
           ],
         ),

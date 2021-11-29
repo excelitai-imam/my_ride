@@ -40,6 +40,7 @@ class PassResetPage extends StatelessWidget {
                 //     builder: (context) => const EnterOtpPage(),
                 //   ),
                 // );
+                Navigator.pushReplacementNamed(context, kRouteRestePassOtp);
               },
               child: const Text("Next"),
             ),

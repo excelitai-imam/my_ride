@@ -43,9 +43,9 @@ class ProfileSetupPage extends StatelessWidget {
                 title: "Setup Profile",
                 subTitle: "Great! you are almost done",
               ),
-              const CircleAvatar(
-                radius: 70,
-                backgroundImage: AssetImage(
+              CircleAvatar(
+                radius: 200.r,
+                backgroundImage: const AssetImage(
                   "assets/p1.jpg",
                 ),
               ),

@@ -70,6 +70,12 @@ class _ResetpassOtpPageState extends State<ResetpassOtpPage> {
               ],
             ),
             SizedBox(height: kVerticalPadding),
+            LoginRegisterFooter(
+              question: '',
+              actionText: 'Send another code',
+              action: () {},
+            ),
+            SizedBox(height: kVerticalPadding),
             ElevatedButton(
               onPressed: () {
                 Navigator.of(context).pushReplacement(
@@ -78,13 +84,7 @@ class _ResetpassOtpPageState extends State<ResetpassOtpPage> {
                   ),
                 );
               },
-              child: const Text("Login"),
-            ),
-            SizedBox(height: kVerticalPadding),
-            LoginRegisterFooter(
-              question: '',
-              actionText: 'Send another code',
-              action: () {},
+              child: const Text("Next"),
             ),
           ],
         ),

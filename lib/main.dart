@@ -70,7 +70,7 @@ class MyApp extends StatelessWidget {
           kRouteRegister1: (context) => const RegisterPage1(),
           kRouteRegister2: (context) => const RegisterPage2(),
           kRouteResetPass: (context) => const PassResetPage(),
-          //kRouteRestePassOtp: (context) => const ResetpassOtpPage(),
+          kRouteRestePassOtp: (context) => const ResetpassOtpPage(),
         },
         debugShowCheckedModeBanner: false,
       ),

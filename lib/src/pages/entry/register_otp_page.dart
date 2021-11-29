@@ -70,6 +70,12 @@ class _RegisterOtpPageState extends State<RegisterOtpPage> {
               ],
             ),
             SizedBox(height: kVerticalPadding),
+            LoginRegisterFooter(
+              question: '',
+              actionText: 'Send another code',
+              action: () {},
+            ),
+            SizedBox(height: kVerticalPadding),
             ElevatedButton(
               onPressed: () {
                 Navigator.of(context).pushReplacement(
@@ -79,12 +85,6 @@ class _RegisterOtpPageState extends State<RegisterOtpPage> {
                 );
               },
               child: const Text("Login"),
-            ),
-            SizedBox(height: kVerticalPadding),
-            LoginRegisterFooter(
-              question: '',
-              actionText: 'Send another code',
-              action: () {},
             ),
           ],
         ),

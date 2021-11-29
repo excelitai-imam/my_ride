@@ -8,9 +8,9 @@ const String kRouteRegister2 = '/register2';
 const String kRouteSetProfile = '/profilesetup';
 //const String kRouteCheckout = '/checkout';
 const String kRouteResetPass = '/passreset';
-const String kRouteLoginOtp = '/';
-const String kRouteRegisterOtp = '/';
-const String kRouteRestePassOtp = '/';
+const String kRouteLoginOtp = '/loginotp';
+const String kRouteRegisterOtp = '/registerotp';
+const String kRouteRestePassOtp = '/resetpassotp';
 const String kRoute = '/';
 // const String kRoute = '/';
 
