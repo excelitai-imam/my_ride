@@ -34,7 +34,7 @@ class LoginPage1 extends StatelessWidget {
                   mainAxisAlignment: MainAxisAlignment.spaceBetween,
                   children: [
                     const LoginRegistrationHeader(
-                      centerText: false,
+                      centerText: true,
                       title: 'Login Account',
                       subTitle: 'Hello, Welcome back to your account',
                     ),

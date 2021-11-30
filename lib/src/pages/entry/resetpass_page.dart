@@ -25,12 +25,36 @@ class PassResetPage extends StatelessWidget {
       body: Container(
         padding: EdgeInsets.symmetric(horizontal: kHorizontalPadding),
         child: Column(
+          crossAxisAlignment: CrossAxisAlignment.center,
           children: [
-            const LoginRegistrationHeader(
-              centerText: true,
-              title: "Reset Password",
-              subTitle:
-                  "Please enter your email to receive a link\nto create new password via email",
+            // const LoginRegistrationHeader(
+            //   centerText: true,
+            //   title: "Reset Password",
+            //   subTitle:
+            //       "Please enter your email to receive a link\nto create new password via email",
+            // ),
+            const Text(
+              "Reset Password",
+              style: TextStyle(
+                fontSize: 18,
+                fontWeight: FontWeight.bold,
+              ),
+              textAlign: TextAlign.center,
+            ),
+            const SizedBox(
+              height: 10,
+            ),
+            const Text(
+              "Please enter your email to receive a link\nto create new password via email",
+              style: TextStyle(
+                color: Colors.grey,
+                fontSize: 12,
+                fontWeight: FontWeight.bold,
+              ),
+              textAlign: TextAlign.center,
+            ),
+            const SizedBox(
+              height: 30,
             ),
             TextFormField(
               style: const TextStyle(color: primaryFontColor),

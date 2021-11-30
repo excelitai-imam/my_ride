@@ -35,38 +35,38 @@ class _ResetpassOtpPageState extends State<ResetpassOtpPage> {
       body: Container(
         padding: EdgeInsets.symmetric(horizontal: kHorizontalPadding),
         child: Column(
-          // crossAxisAlignment: CrossAxisAlignment.center,
+          crossAxisAlignment: CrossAxisAlignment.center,
           children: [
             // const LoginRegistrationHeader(
             //   centerText: true,
             //   title: "Verification Code",
             //   subTitle:
             //       "We have sent the code verification\nto your mobile number",
-
             // ),
-            Column(
-              crossAxisAlignment: CrossAxisAlignment.center,
-              children: const [
-                Text(
-                  "Verification Code",
-                  style: TextStyle(
-                    fontSize: 18,
-                    fontWeight: FontWeight.bold,
-                  ),
-                ),
-                SizedBox(
-                  height: 10,
-                ),
-                Text(
-                  "We have sent the code verification\nto your mobile number",
-                  style: TextStyle(
-                    color: Colors.grey,
-                    fontSize: 12,
-                    fontWeight: FontWeight.bold,
-                  ),
-                ),
-              ],
+            const Text(
+              "Verification Code",
+              style: TextStyle(
+                fontSize: 18,
+                fontWeight: FontWeight.bold,
+              ),
+              textAlign: TextAlign.center,
             ),
+            const SizedBox(
+              height: 10,
+            ),
+            const Text(
+              "We have sent the code verification\nto your mobile number",
+              style: TextStyle(
+                color: Colors.grey,
+                fontSize: 12,
+                fontWeight: FontWeight.bold,
+              ),
+              textAlign: TextAlign.center,
+            ),
+            const SizedBox(
+              height: 30,
+            ),
+
             Row(
               children: [
                 const Center(
