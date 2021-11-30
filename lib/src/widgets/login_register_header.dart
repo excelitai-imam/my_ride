@@ -15,6 +15,7 @@ class LoginRegistrationHeader extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Column(
+      crossAxisAlignment: CrossAxisAlignment.start,
       children: [
         SizedBox(height: kVerticalPadding * 2.5),
         Text(

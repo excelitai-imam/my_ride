@@ -17,22 +17,55 @@ class _ResetpassOtpPageState extends State<ResetpassOtpPage> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        backgroundColor: Colors.transparent,
         elevation: 0,
-        leading: const BackButton(
-          color: Colors.black,
+        backgroundColor: const Color(0xfffcfcfc),
+        leading: GestureDetector(
+          onTap: () {
+            Navigator.pushReplacementNamed(context, kRouteResetPass);
+          },
+          child: const Padding(
+            padding: EdgeInsets.symmetric(horizontal: 10),
+            child: CircleAvatar(
+              backgroundColor: Color(0xfffe8550),
+              child: Icon(Icons.arrow_back, color: Colors.white),
+            ),
+          ),
         ),
       ),
       body: Container(
         padding: EdgeInsets.symmetric(horizontal: kHorizontalPadding),
-        height: MediaQuery.of(context).size.height,
         child: Column(
+          // crossAxisAlignment: CrossAxisAlignment.center,
           children: [
-            const LoginRegistrationHeader(
-              centerText: true,
-              title: "Verification Code",
-              subTitle:
+            // const LoginRegistrationHeader(
+            //   centerText: true,
+            //   title: "Verification Code",
+            //   subTitle:
+            //       "We have sent the code verification\nto your mobile number",
+
+            // ),
+            Column(
+              crossAxisAlignment: CrossAxisAlignment.center,
+              children: const [
+                Text(
+                  "Verification Code",
+                  style: TextStyle(
+                    fontSize: 18,
+                    fontWeight: FontWeight.bold,
+                  ),
+                ),
+                SizedBox(
+                  height: 10,
+                ),
+                Text(
                   "We have sent the code verification\nto your mobile number",
+                  style: TextStyle(
+                    color: Colors.grey,
+                    fontSize: 12,
+                    fontWeight: FontWeight.bold,
+                  ),
+                ),
+              ],
             ),
             Row(
               children: [
@@ -78,11 +111,7 @@ class _ResetpassOtpPageState extends State<ResetpassOtpPage> {
             SizedBox(height: kVerticalPadding),
             ElevatedButton(
               onPressed: () {
-                Navigator.of(context).pushReplacement(
-                  MaterialPageRoute(
-                    builder: (context) => const ProfileSetupPage(),
-                  ),
-                );
+                Navigator.pushReplacementNamed(context, kRouteNewPassOtp);
               },
               child: const Text("Next"),
             ),

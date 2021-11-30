@@ -17,15 +17,23 @@ class _LoginOtpPageState extends State<LoginOtpPage> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        backgroundColor: Colors.transparent,
         elevation: 0,
-        leading: const BackButton(
-          color: Colors.black,
+        backgroundColor: const Color(0xfffcfcfc),
+        leading: GestureDetector(
+          onTap: () {
+            Navigator.pushReplacementNamed(context, kRouteLogin2);
+          },
+          child: const Padding(
+            padding: EdgeInsets.symmetric(horizontal: 10),
+            child: CircleAvatar(
+              backgroundColor: Color(0xfffe8550),
+              child: Icon(Icons.arrow_back, color: Colors.white),
+            ),
+          ),
         ),
       ),
       body: Container(
         padding: EdgeInsets.symmetric(horizontal: kHorizontalPadding),
-        height: MediaQuery.of(context).size.height,
         child: Column(
           children: [
             const LoginRegistrationHeader(

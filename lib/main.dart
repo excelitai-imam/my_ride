@@ -17,7 +17,7 @@ class MyApp extends StatelessWidget {
     return ScreenUtilInit(
       designSize: const Size(1080, 2160),
       builder: () => MaterialApp(
-        title: 'My Ride',
+        title: 'Ei Khali',
         theme: ThemeData(
           scaffoldBackgroundColor: Colors.white,
           primarySwatch: mainColorSwatch,
@@ -47,8 +47,8 @@ class MyApp extends StatelessWidget {
           inputDecorationTheme: InputDecorationTheme(
             fillColor: placeholderColor,
             filled: true,
-            border: OutlineInputBorder(
-              borderRadius: BorderRadius.circular(50),
+            border: const OutlineInputBorder(
+              borderRadius: BorderRadius.all(Radius.circular(50.0)),
               borderSide: BorderSide.none,
             ),
             floatingLabelStyle: TextStyle(
@@ -67,10 +67,13 @@ class MyApp extends StatelessWidget {
           kRouteSetProfile: (context) => const ProfileSetupPage(),
           kRouteLogin1: (context) => const LoginPage1(),
           kRouteLogin2: (context) => const LoginPage2(),
+          kRouteLoginOtp: (context) => const LoginOtpPage(),
           kRouteRegister1: (context) => const RegisterPage1(),
           kRouteRegister2: (context) => const RegisterPage2(),
+          kRouteRegisterOtp: (context) => const RegisterOtpPage(),
           kRouteResetPass: (context) => const PassResetPage(),
           kRouteRestePassOtp: (context) => const ResetpassOtpPage(),
+          kRouteNewPassOtp: (context) => const NewPasswordPage(),
         },
         debugShowCheckedModeBanner: false,
       ),

@@ -11,6 +11,6 @@ const String kRouteResetPass = '/passreset';
 const String kRouteLoginOtp = '/loginotp';
 const String kRouteRegisterOtp = '/registerotp';
 const String kRouteRestePassOtp = '/resetpassotp';
-const String kRoute = '/';
+const String kRouteNewPassOtp = '/newpass';
 // const String kRoute = '/';
 

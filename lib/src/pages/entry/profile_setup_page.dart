@@ -6,26 +6,22 @@ class ProfileSetupPage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      // appBar: AppBar(
-      //   //backgroundColor: Colors.white,
-      //   shadowColor: null,
-      //   title: const Padding(
-      //     padding: EdgeInsets.all(8.0),
-      //     child: Text(
-      //       "Profile",
-      //       style: TextStyle(fontSize: 30, fontWeight: FontWeight.bold),
-      //     ),
-      //   ),
-      //   actions: [
-      //     Padding(
-      //       padding: const EdgeInsets.only(right: 20.0),
-      //       child: IconButton(
-      //           onPressed: () {},
-      //           icon: const Icon(FontAwesomeIcons.shoppingCart)),
-      //     )
-      //   ],
-      // ),
-
+      appBar: AppBar(
+        elevation: 0,
+        backgroundColor: const Color(0xfffcfcfc),
+        leading: GestureDetector(
+          onTap: () {
+            Navigator.pushReplacementNamed(context, kRouteRegister1);
+          },
+          child: const Padding(
+            padding: EdgeInsets.symmetric(horizontal: 10),
+            child: CircleAvatar(
+              backgroundColor: Color(0xfffe8550),
+              child: Icon(Icons.arrow_back, color: Colors.white),
+            ),
+          ),
+        ),
+      ),
       body: SingleChildScrollView(
         child: Padding(
           padding: const EdgeInsets.all(8.0),

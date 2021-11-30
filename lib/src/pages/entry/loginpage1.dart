@@ -6,10 +6,25 @@ class LoginPage1 extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      appBar: AppBar(
+        elevation: 0,
+        backgroundColor: const Color(0xfffcfcfc),
+        // leading: GestureDetector(
+        //   onTap: () {
+        //     Navigator.pushReplacementNamed(context, kRouteLogin1);
+        //   },
+        //   child: const Padding(
+        //     padding: EdgeInsets.symmetric(horizontal: 10),
+        //     child: CircleAvatar(
+        //       backgroundColor: Color(0xfffe8550),
+        //       child: Icon(Icons.arrow_back, color: Colors.white),
+        //     ),
+        //   ),
+        // ),
+      ),
       body: SingleChildScrollView(
         child: Container(
           padding: EdgeInsets.symmetric(horizontal: kHorizontalPadding),
-          height: MediaQuery.of(context).size.height,
           child: Padding(
             padding: const EdgeInsets.all(8.0),
             child: Column(
@@ -134,12 +149,13 @@ class LoginPage1 extends StatelessWidget {
                 SizedBox(height: kVerticalPadding),
                 ElevatedButton.icon(
                   onPressed: () {},
-                  icon: const Icon(
-                    FontAwesomeIcons.googlePlusSquare,
-                    //color: Colors.black,
+                  icon: Image.asset(
+                    'assets/g.png',
+                    height: 25,
+                    width: 25,
                   ),
                   label: const Text(
-                    'Google',
+                    ' Google',
                     style: TextStyle(color: Colors.black),
                   ),
                   style: ElevatedButton.styleFrom(
@@ -147,9 +163,9 @@ class LoginPage1 extends StatelessWidget {
                     padding: EdgeInsets.all(kButtonIconPadding),
                   ),
                 ),
-                const Expanded(child: SizedBox.shrink()),
+                SizedBox(height: kVerticalPadding),
                 LoginRegisterFooter(
-                  question: 'Not registered yet?',
+                  question: 'Not registered yet? ',
                   actionText: ' Create an Account',
                   action: () {
                     Navigator.pushReplacementNamed(context, kRouteRegister1);

@@ -20,7 +20,7 @@ part 'entry/splash_page.dart';
 part 'entry/intro_page.dart';
 part 'entry/loginpage1.dart';
 part 'entry/loginpage2.dart';
-part 'entry/new_password.dart';
+part 'entry/newpass_page.dart';
 part 'entry/register_page1.dart';
 part 'entry/register_page2.dart';
 part 'entry/resetpass_page.dart';

@@ -6,10 +6,25 @@ class RegisterPage1 extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      appBar: AppBar(
+        elevation: 0,
+        backgroundColor: const Color(0xfffcfcfc),
+        // leading: GestureDetector(
+        //   onTap: () {
+        //     Navigator.pushReplacementNamed(context, kRouteLogin1);
+        //   },
+        //   child: const Padding(
+        //     padding: EdgeInsets.symmetric(horizontal: 10),
+        //     child: CircleAvatar(
+        //       backgroundColor: Color(0xfffe8550),
+        //       child: Icon(Icons.arrow_back, color: Colors.white),
+        //     ),
+        //   ),
+        // ),
+      ),
       body: SingleChildScrollView(
         child: Container(
           padding: EdgeInsets.symmetric(horizontal: kHorizontalPadding),
-          height: MediaQuery.of(context).size.height,
           child: Padding(
             padding: const EdgeInsets.all(8.0),
             child: Column(
@@ -77,7 +92,23 @@ class RegisterPage1 extends StatelessWidget {
                 //         ),
                 //   ),
                 // ),
-                SizedBox(height: kVerticalPadding * 2),
+                SizedBox(height: kVerticalPadding),
+                // GestureDetector(
+                //   onTap: () {
+                //     // Navigator.of(context).push(
+                //     //   MaterialPageRoute(
+                //     //     builder: (context) => const EnterEmailPage,
+                //     //   ),
+                //     // );
+                //   },
+                //   child: Text(
+                //     "Forgot your password?",
+                //     style: Theme.of(context).textTheme.subtitle1!.copyWith(
+                //           color: primaryFontColor,
+                //         ),
+                //   ),
+                // ),
+                //SizedBox(height: kVerticalPadding * 2),
                 Text(
                   "Signin with social media",
                   style: Theme.of(context).textTheme.subtitle1!.copyWith(
@@ -87,20 +118,12 @@ class RegisterPage1 extends StatelessWidget {
                 SizedBox(height: kVerticalPadding),
                 ElevatedButton.icon(
                   onPressed: () {},
-                  icon: const Icon(FontAwesomeIcons.googlePlusG),
-                  label: const Text('Google'),
-                  style: ElevatedButton.styleFrom(
-                    primary: const Color(0xffdb4a39),
-                    padding: EdgeInsets.all(kButtonIconPadding),
+                  icon: const Icon(
+                    FontAwesomeIcons.facebookF,
                   ),
-                ),
-                SizedBox(height: kVerticalPadding),
-                ElevatedButton.icon(
-                  onPressed: () {},
-                  icon: const Icon(FontAwesomeIcons.facebookF),
                   label: const Text('Facebook'),
                   style: ElevatedButton.styleFrom(
-                    primary: const Color(0xff3b5998),
+                    primary: const Color(0xff03b6fc),
                     padding: EdgeInsets.all(kButtonIconPadding),
                   ),
                 ),
@@ -122,8 +145,24 @@ class RegisterPage1 extends StatelessWidget {
                 //     ],
                 //   ),
                 // ),
-
-                const Expanded(child: SizedBox.shrink()),
+                SizedBox(height: kVerticalPadding),
+                ElevatedButton.icon(
+                  onPressed: () {},
+                  icon: Image.asset(
+                    'assets/g.png',
+                    height: 25,
+                    width: 25,
+                  ),
+                  label: const Text(
+                    ' Google',
+                    style: TextStyle(color: Colors.black),
+                  ),
+                  style: ElevatedButton.styleFrom(
+                    primary: const Color(0xfff7faf9),
+                    padding: EdgeInsets.all(kButtonIconPadding),
+                  ),
+                ),
+                SizedBox(height: kVerticalPadding),
                 LoginRegisterFooter(
                   question: 'Already have an account?',
                   actionText: '  Log in',
