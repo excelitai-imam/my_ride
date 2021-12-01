@@ -122,7 +122,8 @@ class ProfileSetupPage extends StatelessWidget {
               // SizedBox(height: kVerticalPadding),
               ElevatedButton(
                 onPressed: () {
-                  Navigator.pushReplacementNamed(context, kRouteLogin1);
+                  //Navigator.pushReplacementNamed(context, kRouteLogin1);
+                  Get.to(const MyHomePage());
                 },
                 child: const Text("Done"),
               ),

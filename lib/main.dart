@@ -3,6 +3,7 @@ import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:my_ride/styles/styles.dart';
 import 'package:my_ride/constants.dart';
 import 'package:my_ride/src/pages/pages.dart';
+import 'package:get/get.dart';
 
 void main() {
   runApp(const MyApp());
@@ -16,7 +17,7 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return ScreenUtilInit(
       designSize: const Size(1080, 2160),
-      builder: () => MaterialApp(
+      builder: () => GetMaterialApp(
         title: 'Ei Khali',
         theme: ThemeData(
           scaffoldBackgroundColor: Colors.white,

@@ -10,8 +10,10 @@ import 'package:lottie/lottie.dart';
 //import 'package:lottie/lottie.dart';
 import 'package:my_ride/constants.dart';
 import 'package:my_ride/src/models/models.dart';
+import 'package:my_ride/src/view/home_page.dart';
 import 'package:my_ride/src/widgets/widgets.dart';
 import 'package:my_ride/styles/styles.dart';
+import 'package:get/get.dart';
 //import 'package:flutter_signin_button/flutter_signin_button.dart';
 
 part 'entry/login_opt_page.dart';
