@@ -25,7 +25,7 @@ class PassResetPage extends StatelessWidget {
       body: Container(
         padding: EdgeInsets.symmetric(horizontal: kHorizontalPadding),
         child: Column(
-          crossAxisAlignment: CrossAxisAlignment.center,
+          crossAxisAlignment: CrossAxisAlignment.start,
           children: [
             // const LoginRegistrationHeader(
             //   centerText: true,
@@ -45,26 +45,96 @@ class PassResetPage extends StatelessWidget {
               height: 10,
             ),
             const Text(
-              "Please enter your email to receive a link\nto create new password via email",
+              "Can't sign in to your Account? Enter you\nnumber that you are login with",
               style: TextStyle(
                 color: Colors.grey,
                 fontSize: 12,
                 fontWeight: FontWeight.bold,
               ),
-              textAlign: TextAlign.center,
+              //textAlign: TextAlign.center,
             ),
-            const SizedBox(
-              height: 30,
-            ),
-            TextFormField(
-              style: const TextStyle(color: primaryFontColor),
-              keyboardType: TextInputType.phone,
-              decoration: const InputDecoration(
-                labelText: 'Your Phone Number',
-                isCollapsed: true,
+            SizedBox(height: kVerticalPadding * 2),
+            const Text(
+              "Phone Number",
+              style: TextStyle(
+                color: Colors.grey,
+                fontSize: 12,
+                fontWeight: FontWeight.bold,
               ),
             ),
-            SizedBox(height: kVerticalPadding),
+            SizedBox(height: kVerticalPadding / 2),
+            // const TextField(
+            //   style: TextStyle(color: primaryFontColor),
+            //   keyboardType: TextInputType.phone,
+            //   decoration: InputDecoration(
+            //     prefixIcon: Icon(Icons.arrow_drop_down),
+            //     labelText: '+880 Enter your number',
+            //     isCollapsed: true,
+            //   ),
+            // ),
+            Container(
+              height: MediaQuery.of(context).size.height * .06,
+              width: MediaQuery.of(context).size.width * .95,
+              decoration: BoxDecoration(
+                color: Colors.white,
+                borderRadius: BorderRadius.circular(50.0),
+                boxShadow: [
+                  BoxShadow(
+                    color: Colors.grey.withOpacity(.3),
+                    spreadRadius: 0,
+                    blurRadius: 5,
+                    offset: const Offset(0, 0), // changes position of shadow
+                  ),
+                ],
+              ),
+              child: Row(
+                mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                children: [
+                  IconButton(
+                      icon: const Icon(
+                        FontAwesomeIcons.flagUsa,
+                        //color: Colors.black,
+                        size: 15,
+                      ),
+                      onPressed: () {}),
+                  Row(
+                    crossAxisAlignment: CrossAxisAlignment.start,
+                    children: const [
+                      Padding(
+                        padding: EdgeInsets.symmetric(horizontal: 5),
+                        child: Text("+880"),
+                      ),
+                      Padding(
+                        padding: EdgeInsets.symmetric(horizontal: 5),
+                        child: Text("1864"),
+                      ),
+                      Padding(
+                        padding: EdgeInsets.symmetric(horizontal: 5),
+                        child: Text("654"),
+                        // child: Icon(
+                        //   FontAwesomeIcons.solidCircle,
+                        //   color: Colors.black,
+                        //   size: 8,
+                        // ),
+                      ),
+                      Padding(
+                        padding: EdgeInsets.symmetric(horizontal: 5),
+                        child: Text("262"),
+                      ),
+                    ],
+                  ),
+                  IconButton(
+                    icon: const Icon(
+                      FontAwesomeIcons.checkCircle,
+                      color: Colors.green,
+                      size: 14,
+                    ),
+                    onPressed: () {},
+                  ),
+                ],
+              ),
+            ),
+            SizedBox(height: kVerticalPadding * 6),
             ElevatedButton(
               onPressed: () {
                 // Navigator.of(context).pushReplacement(
@@ -74,7 +144,7 @@ class PassResetPage extends StatelessWidget {
                 // );
                 Navigator.pushReplacementNamed(context, kRouteRestePassOtp);
               },
-              child: const Text("Next"),
+              child: const Text("Get OTP"),
             ),
           ],
         ),

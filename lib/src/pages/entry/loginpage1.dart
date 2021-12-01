@@ -28,7 +28,8 @@ class LoginPage1 extends StatelessWidget {
           child: Padding(
             padding: const EdgeInsets.all(8.0),
             child: Column(
-              mainAxisAlignment: MainAxisAlignment.start,
+              //mainAxisAlignment: MainAxisAlignment.start,
+              crossAxisAlignment: CrossAxisAlignment.start,
               children: [
                 Row(
                   mainAxisAlignment: MainAxisAlignment.spaceBetween,
@@ -56,18 +57,42 @@ class LoginPage1 extends StatelessWidget {
                       children: const [
                         CircleAvatar(
                           radius: 15,
+                          child: Icon(
+                            FontAwesomeIcons.flagUsa,
+                            //color: Colors.black,
+                            size: 15,
+                          ),
                         ),
                         //DropdownMenuItem(child: Column())
                       ],
                     ),
                   ],
                 ),
+                const Text(
+                  "Phone Number",
+                  style: TextStyle(
+                    color: Colors.grey,
+                    fontSize: 12,
+                    fontWeight: FontWeight.bold,
+                  ),
+                ),
+                SizedBox(height: kVerticalPadding / 2),
                 const TextField(
                   style: TextStyle(color: primaryFontColor),
                   keyboardType: TextInputType.emailAddress,
                   decoration: InputDecoration(
-                    prefixIcon: Icon(Icons.arrow_drop_down),
-                    suffixIcon: Icon(Icons.check_box_rounded),
+                    prefixIcon: Icon(
+                      FontAwesomeIcons.flagUsa,
+                      color: Colors.black,
+                      size: 15,
+                    ),
+                    suffixIcon: Icon(
+                      FontAwesomeIcons.checkCircle,
+                      color: Colors.green,
+                      size: 15,
+                    ),
+                    //onPressed: () {},
+
                     labelText: '+880 Enter your number',
                     isCollapsed: true,
                   ),
@@ -110,11 +135,13 @@ class LoginPage1 extends StatelessWidget {
                 //   ),
                 // ),
                 //SizedBox(height: kVerticalPadding * 2),
-                Text(
-                  "Signin with social media",
-                  style: Theme.of(context).textTheme.subtitle1!.copyWith(
-                        color: secondaryFontColor,
-                      ),
+                Center(
+                  child: Text(
+                    "----------Signin with social media----------",
+                    style: Theme.of(context).textTheme.subtitle1!.copyWith(
+                          color: secondaryFontColor,
+                        ),
+                  ),
                 ),
                 SizedBox(height: kVerticalPadding),
                 ElevatedButton.icon(

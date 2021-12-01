@@ -86,6 +86,7 @@ class ProfileSetupPage extends StatelessWidget {
                 style: const TextStyle(color: primaryFontColor),
                 decoration: const InputDecoration(
                   labelText: 'Enter your full name',
+                  prefixIcon: Icon(Icons.account_circle),
                   isCollapsed: true,
                 ),
               ),
@@ -95,6 +96,7 @@ class ProfileSetupPage extends StatelessWidget {
                 keyboardType: TextInputType.number,
                 decoration: const InputDecoration(
                   labelText: 'Age',
+                  prefixIcon: Icon(Icons.watch_later),
                   isCollapsed: true,
                 ),
               ),
@@ -104,6 +106,7 @@ class ProfileSetupPage extends StatelessWidget {
                 keyboardType: TextInputType.emailAddress,
                 decoration: const InputDecoration(
                   labelText: 'Enter your Email address',
+                  prefixIcon: Icon(Icons.mail),
                   isCollapsed: true,
                 ),
               ),
@@ -119,11 +122,7 @@ class ProfileSetupPage extends StatelessWidget {
               // SizedBox(height: kVerticalPadding),
               ElevatedButton(
                 onPressed: () {
-                  Navigator.of(context).pushReplacement(
-                    MaterialPageRoute(
-                      builder: (context) => const ProfileSetupPage(),
-                    ),
-                  );
+                  Navigator.pushReplacementNamed(context, kRouteLogin1);
                 },
                 child: const Text("Done"),
               ),

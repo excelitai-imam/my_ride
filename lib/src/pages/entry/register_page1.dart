@@ -28,6 +28,7 @@ class RegisterPage1 extends StatelessWidget {
           child: Padding(
             padding: const EdgeInsets.all(8.0),
             child: Column(
+              crossAxisAlignment: CrossAxisAlignment.start,
               children: [
                 Row(
                   mainAxisAlignment: MainAxisAlignment.spaceBetween,
@@ -40,30 +41,46 @@ class RegisterPage1 extends StatelessWidget {
                       children: const [
                         CircleAvatar(
                           radius: 15,
+                          child: Icon(
+                            FontAwesomeIcons.flagUsa,
+                            //color: Colors.black,
+                            size: 15,
+                          ),
                         ),
                         //DropdownMenuItem(child: Column())
                       ],
                     ),
                   ],
                 ),
+                const Text(
+                  "Phone Number",
+                  style: TextStyle(
+                    color: Colors.grey,
+                    fontSize: 12,
+                    fontWeight: FontWeight.bold,
+                  ),
+                ),
+                SizedBox(height: kVerticalPadding / 2),
                 const TextField(
                   style: TextStyle(color: primaryFontColor),
                   keyboardType: TextInputType.emailAddress,
                   decoration: InputDecoration(
-                    prefixIcon: Icon(Icons.arrow_drop_down),
-                    labelText: '+880  Enter your number',
+                    prefixIcon: Icon(
+                      FontAwesomeIcons.flagUsa,
+                      color: Colors.black,
+                      size: 15,
+                    ),
+                    suffixIcon: Icon(
+                      FontAwesomeIcons.checkCircle,
+                      color: Colors.green,
+                      size: 15,
+                    ),
+                    //onPressed: () {},
+
+                    labelText: '+880 Enter your number',
                     isCollapsed: true,
                   ),
                 ),
-                // SizedBox(height: kVerticalPadding),
-                // TextFormField(
-                //   style: const TextStyle(color: primaryFontColor),
-                //   obscureText: true,
-                //   decoration: const InputDecoration(
-                //     labelText: 'Password',
-                //     isCollapsed: true,
-                //   ),
-                // ),
                 SizedBox(height: kVerticalPadding),
                 ElevatedButton(
                   onPressed: () {
@@ -77,43 +94,14 @@ class RegisterPage1 extends StatelessWidget {
                   child: const Text("Next"),
                 ),
                 SizedBox(height: kVerticalPadding),
-                // GestureDetector(
-                //   onTap: () {
-                //     // Navigator.of(context).push(
-                //     //   MaterialPageRoute(
-                //     //     builder: (context) => const EnterEmailPage,
-                //     //   ),
-                //     // );
-                //   },
-                //   child: Text(
-                //     "Forgot your password?",
-                //     style: Theme.of(context).textTheme.subtitle1!.copyWith(
-                //           color: primaryFontColor,
-                //         ),
-                //   ),
-                // ),
                 SizedBox(height: kVerticalPadding),
-                // GestureDetector(
-                //   onTap: () {
-                //     // Navigator.of(context).push(
-                //     //   MaterialPageRoute(
-                //     //     builder: (context) => const EnterEmailPage,
-                //     //   ),
-                //     // );
-                //   },
-                //   child: Text(
-                //     "Forgot your password?",
-                //     style: Theme.of(context).textTheme.subtitle1!.copyWith(
-                //           color: primaryFontColor,
-                //         ),
-                //   ),
-                // ),
-                //SizedBox(height: kVerticalPadding * 2),
-                Text(
-                  "Signin with social media",
-                  style: Theme.of(context).textTheme.subtitle1!.copyWith(
-                        color: secondaryFontColor,
-                      ),
+                Center(
+                  child: Text(
+                    "----------Signin with social media----------",
+                    style: Theme.of(context).textTheme.subtitle1!.copyWith(
+                          color: secondaryFontColor,
+                        ),
+                  ),
                 ),
                 SizedBox(height: kVerticalPadding),
                 ElevatedButton.icon(
@@ -127,24 +115,6 @@ class RegisterPage1 extends StatelessWidget {
                     padding: EdgeInsets.all(kButtonIconPadding),
                   ),
                 ),
-                //             Container(
-                //   alignment: Alignment.bottomCenter,
-                //   child: Column(
-                //     mainAxisAlignment: MainAxisAlignment.center,
-                //     children: <Widget>[
-                //       SignInButton(
-                //         Buttons.Google,
-                //         text: "Sign up with Google",
-                //         onPressed: () {},
-                //       ),
-                //       SignInButton(
-                //         Buttons.Facebook,
-                //         text: "Sign up with Facebook",
-                //         onPressed: () {},
-                //       ),
-                //     ],
-                //   ),
-                // ),
                 SizedBox(height: kVerticalPadding),
                 ElevatedButton.icon(
                   onPressed: () {},

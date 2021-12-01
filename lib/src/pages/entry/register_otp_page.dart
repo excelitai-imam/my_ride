@@ -77,7 +77,12 @@ class _RegisterOtpPageState extends State<RegisterOtpPage> {
                     ),
                   ),
                 ),
-                IconButton(onPressed: () {}, icon: const Icon(Icons.edit)),
+                IconButton(
+                    onPressed: () {},
+                    icon: const Icon(
+                      Icons.edit,
+                      color: mainColor,
+                    )),
               ],
             ),
             Row(
@@ -107,17 +112,14 @@ class _RegisterOtpPageState extends State<RegisterOtpPage> {
               actionText: 'Send another code',
               action: () {},
             ),
-            SizedBox(height: kVerticalPadding),
+            SizedBox(height: kVerticalPadding * 3),
             ElevatedButton(
               onPressed: () {
-                Navigator.of(context).pushReplacement(
-                  MaterialPageRoute(
-                    builder: (context) => const ProfileSetupPage(),
-                  ),
-                );
+                Navigator.pushReplacementNamed(context, kRouteLogin1);
               },
-              child: const Text("Login"),
+              child: const Text("Next"),
             ),
+            SizedBox(height: kVerticalPadding),
           ],
         ),
       ),

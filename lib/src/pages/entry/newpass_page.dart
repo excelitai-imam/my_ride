@@ -33,26 +33,62 @@ class NewPasswordPage extends StatelessWidget {
               subTitle: "Enter new password",
             ),
             SizedBox(height: kVerticalPadding),
-            TextFormField(
-              style: const TextStyle(color: primaryFontColor),
+            const Text(
+              "New Password",
+              style: TextStyle(
+                color: Colors.grey,
+                fontSize: 12,
+                fontWeight: FontWeight.bold,
+              ),
+            ),
+            SizedBox(height: kVerticalPadding / 2),
+            const TextField(
               obscureText: true,
-              decoration: const InputDecoration(
-                labelText: 'New Password',
+              style: TextStyle(color: primaryFontColor),
+              keyboardType: TextInputType.text,
+              decoration: InputDecoration(
+                prefixIcon: Icon(Icons.vpn_key_sharp),
+                suffixIcon: Icon(
+                  FontAwesomeIcons.lowVision,
+                  color: Colors.green,
+                  size: 15,
+                ),
+                //onPressed: () {},
+                labelText: 'Enter new password',
                 isCollapsed: true,
               ),
             ),
             SizedBox(height: kVerticalPadding),
-            TextFormField(
-              style: const TextStyle(color: primaryFontColor),
+            const Text(
+              "Confirm Password",
+              style: TextStyle(
+                color: Colors.grey,
+                fontSize: 12,
+                fontWeight: FontWeight.bold,
+              ),
+            ),
+            SizedBox(height: kVerticalPadding / 2),
+            const TextField(
               obscureText: true,
-              decoration: const InputDecoration(
-                labelText: 'Confirm New Password',
+              style: TextStyle(color: primaryFontColor),
+              keyboardType: TextInputType.text,
+              decoration: InputDecoration(
+                prefixIcon: Icon(Icons.vpn_key_sharp),
+                suffixIcon: Icon(
+                  FontAwesomeIcons.lowVision,
+                  color: Colors.green,
+                  size: 15,
+                ),
+                //onPressed: () {},
+                labelText: 'Confirm Password',
                 isCollapsed: true,
               ),
             ),
             SizedBox(height: kVerticalPadding),
             ElevatedButton(
-              onPressed: () {},
+              onPressed: () {
+                Navigator.pushReplacementNamed(context, kRouteLogin1);
+              },
               child: const Text("Save"),
             ),
           ],

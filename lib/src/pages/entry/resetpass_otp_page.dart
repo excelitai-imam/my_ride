@@ -32,10 +32,94 @@ class _ResetpassOtpPageState extends State<ResetpassOtpPage> {
           ),
         ),
       ),
+      // body: Container(
+      //   padding: EdgeInsets.symmetric(horizontal: kHorizontalPadding),
+      //   child: Column(
+      //     crossAxisAlignment: CrossAxisAlignment.center,
+      //     children: [
+      //       // const LoginRegistrationHeader(
+      //       //   centerText: true,
+      //       //   title: "Verification Code",
+      //       //   subTitle:
+      //       //       "We have sent the code verification\nto your mobile number",
+      //       // ),
+      //       const Text(
+      //         "Verification Code",
+      //         style: TextStyle(
+      //           fontSize: 18,
+      //           fontWeight: FontWeight.bold,
+      //         ),
+      //         textAlign: TextAlign.center,
+      //       ),
+      //       const SizedBox(
+      //         height: 10,
+      //       ),
+      //       const Text(
+      //         "We have sent the code verification\nto your mobile number",
+      //         style: TextStyle(
+      //           color: Colors.grey,
+      //           fontSize: 12,
+      //           fontWeight: FontWeight.bold,
+      //         ),
+      //         textAlign: TextAlign.center,
+      //       ),
+      //       const SizedBox(
+      //         height: 30,
+      //       ),
+      //       Row(
+      //         children: [
+      //           const Center(
+      //             child: Text(
+      //               '+8801987654321',
+      //               style: TextStyle(
+      //                 fontWeight: FontWeight.bold,
+      //                 fontSize: 16,
+      //               ),
+      //             ),
+      //           ),
+      //           IconButton(onPressed: () {}, icon: const Icon(Icons.edit)),
+      //         ],
+      //       ),
+      //       Row(
+      //         children: [
+      //           _buildOTPValue(focusNode1, onChanged: (val) {
+      //             if (val.isNotEmpty) focusNode2.requestFocus();
+      //           }),
+      //           SizedBox(width: kHorizontalPadding / 2),
+      //           _buildOTPValue(focusNode2, onChanged: (val) {
+      //             if (val.isNotEmpty) focusNode3.requestFocus();
+      //             if (val.isEmpty) focusNode1.requestFocus();
+      //           }),
+      //           SizedBox(width: kHorizontalPadding / 2),
+      //           _buildOTPValue(focusNode3, onChanged: (val) {
+      //             if (val.isNotEmpty) focusNode4.requestFocus();
+      //             if (val.isEmpty) focusNode2.requestFocus();
+      //           }),
+      //           SizedBox(width: kHorizontalPadding / 2),
+      //           _buildOTPValue(focusNode4, onChanged: (val) {
+      //             if (val.isEmpty) focusNode3.requestFocus();
+      //           }),
+      //         ],
+      //       ),
+      //       SizedBox(height: kVerticalPadding),
+      //       LoginRegisterFooter(
+      //         question: '',
+      //         actionText: 'Send another code',
+      //         action: () {},
+      //       ),
+      //       SizedBox(height: kVerticalPadding),
+      //       ElevatedButton(
+      //         onPressed: () {
+      //           Navigator.pushReplacementNamed(context, kRouteNewPassOtp);
+      //         },
+      //         child: const Text("Next"),
+      //       ),
+      //     ],
+      //   ),
+      // ),
       body: Container(
         padding: EdgeInsets.symmetric(horizontal: kHorizontalPadding),
         child: Column(
-          crossAxisAlignment: CrossAxisAlignment.center,
           children: [
             // const LoginRegistrationHeader(
             //   centerText: true,
@@ -78,7 +162,12 @@ class _ResetpassOtpPageState extends State<ResetpassOtpPage> {
                     ),
                   ),
                 ),
-                IconButton(onPressed: () {}, icon: const Icon(Icons.edit)),
+                IconButton(
+                    onPressed: () {},
+                    icon: const Icon(
+                      Icons.edit,
+                      color: mainColor,
+                    )),
               ],
             ),
             Row(
@@ -108,13 +197,14 @@ class _ResetpassOtpPageState extends State<ResetpassOtpPage> {
               actionText: 'Send another code',
               action: () {},
             ),
-            SizedBox(height: kVerticalPadding),
+            SizedBox(height: kVerticalPadding * 3),
             ElevatedButton(
               onPressed: () {
                 Navigator.pushReplacementNamed(context, kRouteNewPassOtp);
               },
               child: const Text("Next"),
             ),
+            SizedBox(height: kVerticalPadding),
           ],
         ),
       ),

@@ -77,7 +77,12 @@ class _LoginOtpPageState extends State<LoginOtpPage> {
                     ),
                   ),
                 ),
-                IconButton(onPressed: () {}, icon: const Icon(Icons.edit)),
+                IconButton(
+                    onPressed: () {},
+                    icon: const Icon(
+                      Icons.edit,
+                      color: mainColor,
+                    )),
               ],
             ),
             Row(
@@ -107,7 +112,7 @@ class _LoginOtpPageState extends State<LoginOtpPage> {
               actionText: 'Send another code',
               action: () {},
             ),
-            SizedBox(height: kVerticalPadding),
+            SizedBox(height: kVerticalPadding * 3),
             ElevatedButton(
               onPressed: () {
                 Navigator.of(context).pushReplacement(
@@ -116,7 +121,7 @@ class _LoginOtpPageState extends State<LoginOtpPage> {
                   ),
                 );
               },
-              child: const Text("Login"),
+              child: const Text("Next"),
             ),
             SizedBox(height: kVerticalPadding),
           ],
