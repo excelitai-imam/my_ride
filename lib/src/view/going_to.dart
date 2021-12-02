@@ -1,11 +1,8 @@
-// ignore_for_file: unused_import
-
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:get/get_core/src/get_main.dart';
 import 'package:get/get_navigation/src/extension_navigation.dart';
-import 'package:my_ride/src/view/finish_ride.dart';
-//import 'package:googler_maps_in_flutter/view/finish_ride.dart';
+import 'package:my_ride/src/view/show_Notifications.dart';
 
 class GoingTo extends StatelessWidget {
   const GoingTo({Key? key}) : super(key: key);
@@ -102,7 +99,30 @@ class GoingTo extends StatelessWidget {
                           //padding:EdgeInsets.all(20)
                         ),
                         onPressed: () {
-                          Get.to(FinishRide());
+                          //Get.to(FinishRide());
+                          showDialog(
+                            context: context,
+                            builder: (BuildContext context) {
+                              return Theme(
+                                data: Theme.of(context).copyWith(
+                                  dialogBackgroundColor: Colors.transparent,
+                                ),
+                                child: AlertDialog(
+                                  //backgroundColor: Colors.red,
+                                  contentPadding: EdgeInsets.zero,
+                                  title: Center(
+                                    child: Text(""),
+                                  ),
+                                  content: Column(
+                                    mainAxisSize: MainAxisSize.min,
+                                    children: [
+                                      Hurrah(),
+                                    ],
+                                  ),
+                                ),
+                              );
+                            },
+                          );
                         },
                         child: Text("Drop Here"),
                       ),
@@ -120,7 +140,30 @@ class GoingTo extends StatelessWidget {
                           //padding:EdgeInsets.all(20)
                         ),
                         onPressed: () {
-                          Get.to(FinishRide());
+                          //Get.to(FinishRide());
+                          showDialog(
+                            context: context,
+                            builder: (BuildContext context) {
+                              return Theme(
+                                data: Theme.of(context).copyWith(
+                                  dialogBackgroundColor: Colors.transparent,
+                                ),
+                                child: AlertDialog(
+                                  //backgroundColor: Colors.red,
+                                  contentPadding: EdgeInsets.zero,
+                                  title: Center(
+                                    child: Text(""),
+                                  ),
+                                  content: Column(
+                                    mainAxisSize: MainAxisSize.min,
+                                    children: [
+                                      Report(),
+                                    ],
+                                  ),
+                                ),
+                              );
+                            },
+                          );
                         },
                         child: Padding(
                           padding: const EdgeInsets.symmetric(horizontal: 10),

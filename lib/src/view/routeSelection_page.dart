@@ -2,7 +2,6 @@ import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:get/get.dart';
-//import 'package:googler_maps_in_flutter/view/package_selection_page.dart';
 import 'package:my_ride/src/view/package_selection_page.dart';
 
 class RouteSelection extends StatelessWidget {
@@ -226,7 +225,7 @@ class RouteSelection extends StatelessWidget {
                 // _customWidget1(
                 //   context,
                 //   FontAwesomeIcons.mapPin,
-                //   "Set in map",
+                //   "Set in map",flutter
                 //   Colors.red,
                 // ),
                 Padding(
