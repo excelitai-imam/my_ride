@@ -23,6 +23,7 @@ class LoginPage1 extends StatelessWidget {
         // ),
       ),
       body: SingleChildScrollView(
+        // reverse: true,
         child: Container(
           padding: EdgeInsets.symmetric(horizontal: kHorizontalPadding),
           child: Padding(
@@ -39,20 +40,6 @@ class LoginPage1 extends StatelessWidget {
                       title: 'Login Account',
                       subTitle: 'Hello, Welcome back to your account',
                     ),
-                    // Column(
-                    //   children: [
-                    //     Row(
-                    //       children: const [
-                    //         Text('data'),
-                    //       ],
-                    //     ),
-                    //     Row(
-                    //       children: const [
-                    //         Text('data'),
-                    //       ],
-                    //     )
-                    //   ],
-                    // ),
                     Row(
                       children: const [
                         CircleAvatar(
@@ -79,7 +66,7 @@ class LoginPage1 extends StatelessWidget {
                 SizedBox(height: kVerticalPadding / 2),
                 const TextField(
                   style: TextStyle(color: primaryFontColor),
-                  keyboardType: TextInputType.emailAddress,
+                  keyboardType: TextInputType.phone,
                   decoration: InputDecoration(
                     prefixIcon: Icon(
                       FontAwesomeIcons.flagUsa,
@@ -97,15 +84,6 @@ class LoginPage1 extends StatelessWidget {
                     isCollapsed: true,
                   ),
                 ),
-                // SizedBox(height: kVerticalPadding),
-                // TextFormField(
-                //   style: const TextStyle(color: primaryFontColor),
-                //   obscureText: true,
-                //   decoration: const InputDecoration(
-                //     labelText: 'Password',
-                //     isCollapsed: true,
-                //   ),
-                // ),
                 SizedBox(height: kVerticalPadding),
                 ElevatedButton(
                   onPressed: () {
@@ -119,22 +97,6 @@ class LoginPage1 extends StatelessWidget {
                   child: const Text("Next"),
                 ),
                 SizedBox(height: kVerticalPadding),
-                // GestureDetector(
-                //   onTap: () {
-                //     // Navigator.of(context).push(
-                //     //   MaterialPageRoute(
-                //     //     builder: (context) => const EnterEmailPage,
-                //     //   ),
-                //     // );
-                //   },
-                //   child: Text(
-                //     "Forgot your password?",
-                //     style: Theme.of(context).textTheme.subtitle1!.copyWith(
-                //           color: primaryFontColor,
-                //         ),
-                //   ),
-                // ),
-                //SizedBox(height: kVerticalPadding * 2),
                 Center(
                   child: Text(
                     "----------Signin with social media----------",
@@ -155,24 +117,6 @@ class LoginPage1 extends StatelessWidget {
                     padding: EdgeInsets.all(kButtonIconPadding),
                   ),
                 ),
-                //             Container(
-                //   alignment: Alignment.bottomCenter,
-                //   child: Column(
-                //     mainAxisAlignment: MainAxisAlignment.center,
-                //     children: <Widget>[
-                //       SignInButton(
-                //         Buttons.Google,
-                //         text: "Sign up with Google",
-                //         onPressed: () {},
-                //       ),
-                //       SignInButton(
-                //         Buttons.Facebook,
-                //         text: "Sign up with Facebook",
-                //         onPressed: () {},
-                //       ),
-                //     ],
-                //   ),
-                // ),
                 SizedBox(height: kVerticalPadding),
                 ElevatedButton.icon(
                   onPressed: () {},

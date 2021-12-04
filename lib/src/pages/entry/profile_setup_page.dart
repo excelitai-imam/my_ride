@@ -36,6 +36,7 @@ class ProfileSetupPage extends StatelessWidget {
         ],
       ),
       body: SingleChildScrollView(
+        reverse: true,
         padding: EdgeInsets.symmetric(horizontal: kHorizontalPadding),
         child: Padding(
           padding: const EdgeInsets.all(8.0),
@@ -84,6 +85,7 @@ class ProfileSetupPage extends StatelessWidget {
 
               TextFormField(
                 style: const TextStyle(color: primaryFontColor),
+                keyboardType: TextInputType.text,
                 decoration: const InputDecoration(
                   labelText: 'Enter your full name',
                   prefixIcon: Icon(Icons.account_circle),

@@ -2,9 +2,11 @@ import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:get/get_core/src/get_main.dart';
 import 'package:get/get_navigation/src/extension_navigation.dart';
+import 'package:my_ride/src/view/finish_ride.dart';
 import 'package:my_ride/src/view/going_to.dart';
 import 'package:my_ride/src/view/home_page.dart';
 import 'package:my_ride/src/view/rider_page.dart';
+import 'package:my_ride/styles/styles.dart';
 
 class TrafalgarLow extends StatelessWidget {
   const TrafalgarLow({Key? key}) : super(key: key);
@@ -141,10 +143,10 @@ class CancelRequest extends StatelessWidget {
       child: Container(
         height: size.height * .3,
         width: size.width,
-        decoration: BoxDecoration(
-          color: Color(0xfffff4ef),
-          borderRadius: BorderRadius.circular(20),
-        ),
+        // decoration: BoxDecoration(
+        //   color: Colors.red[200], //Color(0xfffff4ef),
+        //   borderRadius: BorderRadius.circular(20),
+        // ),
         child: Padding(
           padding: const EdgeInsets.symmetric(horizontal: 10, vertical: 20),
           child: Column(
@@ -220,24 +222,11 @@ class Hurrah extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      height: MediaQuery.of(context).size.height * .50,
+      //height: MediaQuery.of(context).size.height * .6,
       width: MediaQuery.of(context).size.width * .65,
       decoration: BoxDecoration(
         color: Color(0xfffff4ef),
-        borderRadius: BorderRadius.only(
-          topLeft: Radius.circular(20.0),
-          topRight: Radius.circular(20.0),
-          bottomLeft: Radius.circular(20.0),
-          bottomRight: Radius.circular(20.0),
-        ),
-        boxShadow: [
-          BoxShadow(
-            color: Colors.grey.withOpacity(.3),
-            spreadRadius: 0,
-            blurRadius: 5,
-            offset: Offset(0, 0), // changes position of shadow
-          ),
-        ],
+        borderRadius: BorderRadius.circular(20),
       ),
       child: Padding(
         padding: const EdgeInsets.symmetric(vertical: 10),
@@ -424,106 +413,142 @@ class Hurrah extends StatelessWidget {
                   SizedBox(
                     width: 110,
                     height: 35,
-                    child: ElevatedButton(
-                      style: ButtonStyle(
-                        foregroundColor:
-                            MaterialStateProperty.all<Color>(Colors.white),
-                        backgroundColor:
-                            MaterialStateProperty.all<Color>(Colors.white),
-                        shape:
-                            MaterialStateProperty.all<RoundedRectangleBorder>(
-                          RoundedRectangleBorder(
-                              borderRadius: BorderRadius.only(
-                                topLeft: Radius.circular(50),
-                                topRight: Radius.circular(50),
-                                bottomLeft: Radius.circular(50),
-                                bottomRight: Radius.circular(50),
-                              ),
-                              side: BorderSide(color: Colors.white)),
-                        ),
-                      ),
+                    child: OutlineButton(
+                      color: Colors.white,
+                      shape: RoundedRectangleBorder(
+                          borderRadius: BorderRadius.circular(50)),
                       onPressed: () {
-                        //Navigator.push(context,MaterialPageRoute(builder: (context) =>Location2()));
                         Get.off(MyHomePage());
+                        // Navigator.of(context).push(
+                        //   MaterialPageRoute(
+                        //     builder: (context) => const ProfileSetupPage(),
+                        //   ),
+                        // );
+                        //Navigator.pushReplacementNamed(context, MyHomePage());
                       },
-                      child: Column(
-                        children: [
-                          Padding(
-                            padding: const EdgeInsets.symmetric(vertical: 10),
-                            child: Text(
-                              "Go Home",
-                              style: TextStyle(
-                                color: Colors.black,
-                                fontSize: 12,
-                              ),
-                            ),
-                          ),
-                        ],
+                      child: const Text(
+                        "Go Home",
+                        style: TextStyle(color: primaryFontColor),
                       ),
                     ),
+                    // child: ElevatedButton(
+                    //   // style: ButtonStyle(
+                    //   //   foregroundColor:
+                    //   //       MaterialStateProperty.all<Color>(Colors.white),
+                    //   //   backgroundColor:
+                    //   //       MaterialStateProperty.all<Color>(Colors.white),
+                    //   //   shape:
+                    //   //       MaterialStateProperty.all<RoundedRectangleBorder>(
+                    //   //     RoundedRectangleBorder(
+                    //   //         borderRadius: BorderRadius.only(
+                    //   //           topLeft: Radius.circular(50),
+                    //   //           topRight: Radius.circular(50),
+                    //   //           bottomLeft: Radius.circular(50),
+                    //   //           bottomRight: Radius.circular(50),
+                    //   //         ),
+                    //   //         side: BorderSide(color: Colors.white)),
+                    //   //   ),
+                    //   // ),
+                    //   onPressed: () {
+                    //     //Navigator.push(context,MaterialPageRoute(builder: (context) =>Location2()));
+                    //     Get.off(MyHomePage());
+                    //   },
+                    //   child: Text(
+                    //     "Go Home",
+                    //     // style: Theme.of(context).textTheme.bodyText1!.copyWith(
+                    //     //     color: Colors.black, fontWeight: FontWeight.bold),
+                    //   ),
+                    // ),
                   ),
                   SizedBox(
                     width: 110,
                     height: 35,
-                    child: ElevatedButton(
-                      style: ButtonStyle(
-                        foregroundColor:
-                            MaterialStateProperty.all<Color>(Colors.white),
-                        backgroundColor: MaterialStateProperty.all<Color>(
-                            Colors.deepOrangeAccent),
-                        shape:
-                            MaterialStateProperty.all<RoundedRectangleBorder>(
-                          RoundedRectangleBorder(
-                              borderRadius: BorderRadius.only(
-                                topLeft: Radius.circular(50),
-                                topRight: Radius.circular(50),
-                                bottomLeft: Radius.circular(50),
-                                bottomRight: Radius.circular(50),
-                              ),
-                              side: BorderSide(color: Colors.deepOrangeAccent)),
+                    child: Theme(
+                      data: Theme.of(context).copyWith(
+                        buttonTheme: ButtonTheme.of(context).copyWith(
+                            buttonColor: Color(0xfffe8550),
+                            materialTapTargetSize:
+                                MaterialTapTargetSize.shrinkWrap),
+                      ),
+                      child: OutlineButton(
+                        color: Color(0xfffe8550),
+                        shape: RoundedRectangleBorder(
+                            borderRadius: BorderRadius.circular(50)),
+                        onPressed: () {
+                          Get.off(FinishRide());
+                          // Navigator.of(context).push(
+                          //   MaterialPageRoute(
+                          //     builder: (context) => const ProfileSetupPage(),
+                          //   ),
+                          // );
+                          //Navigator.pushReplacementNamed(context, MyHomePage());
+                        },
+                        child: const Text(
+                          "Give Review",
+                          style: TextStyle(color: primaryFontColor),
                         ),
                       ),
-                      onPressed: () {
-                        //Navigator.push(context,MaterialPageRoute(builder: (context) =>Location2()));
-                        showDialog(
-                          context: context,
-                          builder: (BuildContext context) {
-                            return Theme(
-                              data: Theme.of(context).copyWith(
-                                dialogBackgroundColor: Colors.transparent,
-                              ),
-                              child: AlertDialog(
-                                //backgroundColor: Colors.red,
-                                contentPadding: EdgeInsets.zero,
-                                title: Center(
-                                  child: Text(""),
-                                ),
-                                content: Column(
-                                  mainAxisSize: MainAxisSize.min,
-                                  children: [
-                                    Review(),
-                                  ],
-                                ),
-                              ),
-                            );
-                          },
-                        );
-                      },
-                      child: Column(
-                        children: [
-                          Padding(
-                            padding: const EdgeInsets.symmetric(vertical: 10),
-                            child: Text(
-                              "Give Review",
-                              style: TextStyle(
-                                color: Colors.white,
-                                fontSize: 12,
-                              ),
-                            ),
-                          ),
-                        ],
-                      ),
                     ),
+                    // child: ElevatedButton(
+                    //   style: ButtonStyle(
+                    //     foregroundColor:
+                    //         MaterialStateProperty.all<Color>(Colors.white),
+                    //     backgroundColor: MaterialStateProperty.all<Color>(
+                    //         Colors.deepOrangeAccent),
+                    //     shape:
+                    //         MaterialStateProperty.all<RoundedRectangleBorder>(
+                    //       RoundedRectangleBorder(
+                    //           borderRadius: BorderRadius.only(
+                    //             topLeft: Radius.circular(50),
+                    //             topRight: Radius.circular(50),
+                    //             bottomLeft: Radius.circular(50),
+                    //             bottomRight: Radius.circular(50),
+                    //           ),
+                    //           side: BorderSide(color: Colors.deepOrangeAccent)),
+                    //     ),
+                    //   ),
+                    //   onPressed: () {
+                    //     //Navigator.push(context,MaterialPageRoute(builder: (context) =>Location2()));
+                    //     Get.to(FinishRide());
+                    //     // showDialog(
+                    //     //   context: context,
+                    //     //   builder: (BuildContext context) {
+                    //     //     return Theme(
+                    //     //       data: Theme.of(context).copyWith(
+                    //     //         dialogBackgroundColor: Colors.transparent,
+                    //     //       ),
+                    //     //       child: AlertDialog(
+                    //     //         //backgroundColor: Colors.red,
+                    //     //         contentPadding: EdgeInsets.zero,
+                    //     //         title: Center(
+                    //     //           child: Text(""),
+                    //     //         ),
+                    //     //         content: Column(
+                    //     //           mainAxisSize: MainAxisSize.min,
+                    //     //           children: [
+                    //     //             Review(),
+                    //     //           ],
+                    //     //         ),
+                    //     //       ),
+                    //     //     );
+                    //     //   },
+                    //     // );
+                    //   },
+                    //   child: Column(
+                    //     children: [
+                    //       Padding(
+                    //         padding: const EdgeInsets.symmetric(vertical: 10),
+                    //         child: Text(
+                    //           "Give Review",
+                    //           style: TextStyle(
+                    //             color: Colors.white,
+                    //             fontSize: 12,
+                    //           ),
+                    //         ),
+                    //       ),
+                    //     ],
+                    //   ),
+                    // ),
                   ),
                 ],
               ),
@@ -746,25 +771,16 @@ class Review extends StatelessWidget {
 }
 
 class Report extends StatelessWidget {
-  const Report({Key? key}) : super(key: key);
-
+  Report({Key? key}) : super(key: key);
   @override
   Widget build(BuildContext context) {
+    final size = MediaQuery.of(context).size;
     return Container(
       // height: MediaQuery.of(context).size.height* .20,
-      width: MediaQuery.of(context).size.width * .90,
+      width: size.width * .90,
       decoration: BoxDecoration(
         color: Color(0xfffff4ef),
-        borderRadius: BorderRadius.only(
-          topLeft: Radius.circular(20.0),
-          topRight: Radius.circular(20.0),
-          bottomLeft: Radius.circular(20.0),
-          bottomRight: Radius.circular(20.0),
-        ),
-        border: new Border.all(
-          width: 0.2,
-          color: Colors.grey,
-        ),
+        borderRadius: BorderRadius.circular(20),
       ),
       child: Column(
         children: [
@@ -772,7 +788,6 @@ class Report extends StatelessWidget {
             "Report a Problem",
             style: TextStyle(
               fontSize: 20,
-
               color: Color(0xfffe8550),
               // Color: Colors(0xfffe8550),
             ),
@@ -782,12 +797,7 @@ class Report extends StatelessWidget {
             child: Container(
               decoration: BoxDecoration(
                 color: Colors.white,
-                borderRadius: BorderRadius.only(
-                  topLeft: Radius.circular(35.0),
-                  topRight: Radius.circular(35.0),
-                  bottomLeft: Radius.circular(35.0),
-                  bottomRight: Radius.circular(35.0),
-                ),
+                borderRadius: BorderRadius.circular(35),
               ),
               child: Padding(
                 padding:
@@ -811,21 +821,9 @@ class Report extends StatelessWidget {
               Padding(
                 padding: const EdgeInsets.symmetric(horizontal: 8.0),
                 child: ElevatedButton(
-                  style: ButtonStyle(
-                    foregroundColor:
-                        MaterialStateProperty.all<Color>(Colors.white),
-                    backgroundColor:
-                        MaterialStateProperty.all<Color>(Colors.red),
-                    shape: MaterialStateProperty.all<RoundedRectangleBorder>(
-                      RoundedRectangleBorder(
-                        borderRadius: BorderRadius.only(
-                          topLeft: Radius.circular(50),
-                          topRight: Radius.circular(50),
-                          bottomLeft: Radius.circular(50),
-                          bottomRight: Radius.circular(50),
-                        ),
-                      ),
-                    ),
+                  style: ElevatedButton.styleFrom(
+                    primary: Colors.red, // background
+                    onPrimary: Colors.yellow, // foreground
                   ),
                   onPressed: () {
                     Get.to(MyHomePage());
@@ -854,12 +852,7 @@ class Report extends StatelessWidget {
                       MaterialStateProperty.all<Color>(Colors.green),
                   shape: MaterialStateProperty.all<RoundedRectangleBorder>(
                     RoundedRectangleBorder(
-                      borderRadius: BorderRadius.only(
-                        topLeft: Radius.circular(50),
-                        topRight: Radius.circular(50),
-                        bottomLeft: Radius.circular(50),
-                        bottomRight: Radius.circular(50),
-                      ),
+                      borderRadius: BorderRadius.circular(50),
                     ),
                   ),
                 ),

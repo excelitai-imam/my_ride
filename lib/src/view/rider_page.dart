@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:get/get_core/src/get_main.dart';
 import 'package:get/get_navigation/src/extension_navigation.dart';
+import 'package:my_ride/src/view/going_to.dart';
 import 'package:my_ride/src/view/mapCallPages/call_screen1.dart';
 import 'package:my_ride/src/view/mapCallPages/massage_screen.dart';
 import 'package:my_ride/src/view/show_Notifications.dart';
@@ -249,31 +250,55 @@ class Rider extends StatelessWidget {
                                     //padding:EdgeInsets.all(20)
                                   ),
                                   onPressed: () {
-                                    //Get.to(GoingTo());
-                                    showDialog(
-                                      context: context,
-                                      builder: (BuildContext context) {
-                                        return Theme(
-                                          data: Theme.of(context).copyWith(
-                                            dialogBackgroundColor:
-                                                Colors.transparent,
-                                          ),
-                                          child: AlertDialog(
-                                            //backgroundColor: Colors.red,
-                                            contentPadding: EdgeInsets.zero,
-                                            title: Center(
-                                              child: Text(""),
-                                            ),
-                                            content: Column(
-                                              mainAxisSize: MainAxisSize.min,
-                                              children: [
-                                                CancelRequest(),
-                                              ],
-                                            ),
-                                          ),
-                                        );
-                                      },
-                                    );
+                                    Get.to(GoingTo());
+                                    // showDialog(
+                                    //   context: context,
+                                    //   builder: (BuildContext context) {
+                                    //     return Theme(
+                                    //       data: Theme.of(context).copyWith(
+                                    //         dialogBackgroundColor:
+                                    //             Colors.transparent,
+                                    //       ),
+                                    //       child: AlertDialog(
+                                    //         //backgroundColor: Colors.red,
+                                    //         contentPadding: EdgeInsets.zero,
+                                    //         title: Center(
+                                    //           child: Text(""),
+                                    //         ),
+                                    //         content: Column(
+                                    //           mainAxisSize: MainAxisSize.min,
+                                    //           children: [
+                                    //             TrafalgarLow(),
+                                    //           ],
+                                    //         ),
+                                    //       ),
+                                    //     );
+                                    //   },
+                                    // );
+                                    // showDialog(
+                                    //   context: context,
+                                    //   builder: (BuildContext context) {
+                                    //     return Theme(
+                                    //       data: Theme.of(context).copyWith(
+                                    //         dialogBackgroundColor:
+                                    //             Colors.red[200],
+                                    //       ),
+                                    //       child: AlertDialog(
+                                    //         //backgroundColor: Colors.red,
+                                    //         contentPadding: EdgeInsets.zero,
+                                    //         title: Center(
+                                    //           child: Text(""),
+                                    //         ),
+                                    //         content: Column(
+                                    //           mainAxisSize: MainAxisSize.min,
+                                    //           children: [
+                                    //             Review(),
+                                    //           ],
+                                    //         ),
+                                    //       ),
+                                    //     );
+                                    //   },
+                                    // );
                                   },
                                   child: Row(
                                     children: [

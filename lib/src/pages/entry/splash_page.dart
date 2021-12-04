@@ -44,31 +44,6 @@ class _SplashPageState extends State<SplashPage> with TickerProviderStateMixin {
           const SplashLogo(),
         ],
       ),
-
-      // body: ListView(
-      //   children: [
-      //     // Load a Lottie file from your assets
-      //     //Lottie.asset('assets/data.json'),
-      //     Lottie.asset(
-      //       'assets/data.json',
-      //       controller: _controller,
-      //       onLoaded: (composition) {
-      //         // Configure the AnimationController with the duration of the
-      //         // Lottie file and start the animation.
-      //         _controller
-      //           ..duration = composition.duration
-      //           ..forward();
-      //       },
-      //     ),
-
-      //     // Load a Lottie file from a remote url
-      //     // Lottie.network(
-      //     //     'https://assets2.lottiefiles.com/packages/lf20_jowhefc2/new car riding animation svg/data.json'),
-
-      //     // Load an animation and its images from a zip file
-      //     //Lottie.asset('assets/lottie.zip'),
-      //   ],
-      // ),
     );
   }
 }

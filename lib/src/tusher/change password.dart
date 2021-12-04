@@ -1,6 +1,5 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter/services.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:my_ride/src/tusher/saved%20location.dart';
 
@@ -20,7 +19,8 @@ class _PasswordState extends State<Password> {
         backgroundColor: Color(0xffcfcfc),
         leading: GestureDetector(
           onTap: () {
-            Navigator.push(context, MaterialPageRoute(builder: (context) => Location()));
+            Navigator.push(
+                context, MaterialPageRoute(builder: (context) => Location()));
           },
           child: const Padding(
             padding: EdgeInsets.symmetric(horizontal: 10),
@@ -36,22 +36,29 @@ class _PasswordState extends State<Password> {
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
-            Text("New Password",
-            style: TextStyle(
-              fontSize: 18,
-              fontWeight: FontWeight.bold,
-             ),
+            Text(
+              "New Password",
+              style: TextStyle(
+                fontSize: 18,
+                fontWeight: FontWeight.bold,
+              ),
             ),
-            SizedBox(height: 10,),
-            Text("Enter new password",
+            SizedBox(
+              height: 10,
+            ),
+            Text(
+              "Enter new password",
               style: TextStyle(
                 color: Colors.grey,
                 fontSize: 12,
                 fontWeight: FontWeight.bold,
               ),
             ),
-            SizedBox(height: 30,),
-            Text("Current Password",
+            SizedBox(
+              height: 30,
+            ),
+            Text(
+              "Current Password",
               style: TextStyle(
                 color: Colors.grey,
                 fontSize: 12,
@@ -60,8 +67,8 @@ class _PasswordState extends State<Password> {
             ),
             SizedBox(height: 15),
             Container(
-              height: MediaQuery.of(context).size.height* .06,
-              width: MediaQuery.of(context).size.width* .95,
+              height: MediaQuery.of(context).size.height * .06,
+              width: MediaQuery.of(context).size.width * .95,
               decoration: BoxDecoration(
                 color: Colors.white,
                 borderRadius: BorderRadius.only(
@@ -85,48 +92,81 @@ class _PasswordState extends State<Password> {
                   Transform.rotate(
                     angle: 60,
                     child: IconButton(
-                        icon: FaIcon(FontAwesomeIcons.key, color: Colors.black, size: 13,),
-                        onPressed: () {}
-                    ),
+                        icon: FaIcon(
+                          FontAwesomeIcons.key,
+                          color: Colors.black,
+                          size: 13,
+                        ),
+                        onPressed: () {}),
                   ),
                   Row(
                     crossAxisAlignment: CrossAxisAlignment.start,
                     children: [
                       Padding(
                         padding: const EdgeInsets.symmetric(horizontal: 5),
-                        child: Icon(FontAwesomeIcons.solidCircle, color: Colors.black, size: 8,),
+                        child: Icon(
+                          FontAwesomeIcons.solidCircle,
+                          color: Colors.black,
+                          size: 8,
+                        ),
                       ),
                       Padding(
                         padding: const EdgeInsets.symmetric(horizontal: 5),
-                        child: Icon(FontAwesomeIcons.solidCircle, color: Colors.black, size: 8,),
+                        child: Icon(
+                          FontAwesomeIcons.solidCircle,
+                          color: Colors.black,
+                          size: 8,
+                        ),
                       ),
                       Padding(
                         padding: const EdgeInsets.symmetric(horizontal: 5),
-                        child: Icon(FontAwesomeIcons.solidCircle, color: Colors.black, size: 8,),
+                        child: Icon(
+                          FontAwesomeIcons.solidCircle,
+                          color: Colors.black,
+                          size: 8,
+                        ),
                       ),
                       Padding(
                         padding: const EdgeInsets.symmetric(horizontal: 5),
-                        child: Icon(FontAwesomeIcons.solidCircle, color: Colors.black, size: 8,),
+                        child: Icon(
+                          FontAwesomeIcons.solidCircle,
+                          color: Colors.black,
+                          size: 8,
+                        ),
                       ),
                       Padding(
                         padding: const EdgeInsets.symmetric(horizontal: 5),
-                        child: Icon(FontAwesomeIcons.solidCircle, color: Colors.black, size: 8,),
+                        child: Icon(
+                          FontAwesomeIcons.solidCircle,
+                          color: Colors.black,
+                          size: 8,
+                        ),
                       ),
                       Padding(
                         padding: const EdgeInsets.symmetric(horizontal: 5),
-                        child: Icon(FontAwesomeIcons.solidCircle, color: Colors.black, size: 8,),
+                        child: Icon(
+                          FontAwesomeIcons.solidCircle,
+                          color: Colors.black,
+                          size: 8,
+                        ),
                       ),
                     ],
                   ),
                   IconButton(
-                      icon: FaIcon(FontAwesomeIcons.eye, color: Colors.green, size: 14,),
-                      onPressed: () {}
-                  ),
+                      icon: FaIcon(
+                        FontAwesomeIcons.eye,
+                        color: Colors.green,
+                        size: 14,
+                      ),
+                      onPressed: () {}),
                 ],
               ),
             ),
-            SizedBox(height: 15,),
-            Text("New Password",
+            SizedBox(
+              height: 15,
+            ),
+            Text(
+              "New Password",
               style: TextStyle(
                 color: Colors.grey,
                 fontSize: 12,
@@ -135,8 +175,8 @@ class _PasswordState extends State<Password> {
             ),
             SizedBox(height: 15),
             Container(
-              height: MediaQuery.of(context).size.height* .06,
-              width: MediaQuery.of(context).size.width* .95,
+              height: MediaQuery.of(context).size.height * .06,
+              width: MediaQuery.of(context).size.width * .95,
               decoration: BoxDecoration(
                 color: Colors.white,
                 borderRadius: BorderRadius.only(
@@ -160,46 +200,81 @@ class _PasswordState extends State<Password> {
                   Transform.rotate(
                     angle: 60,
                     child: IconButton(
-                        icon: FaIcon(FontAwesomeIcons.key, color: Colors.black, size: 13,),
-                        onPressed: () {}
-                    ),
+                        icon: FaIcon(
+                          FontAwesomeIcons.key,
+                          color: Colors.black,
+                          size: 13,
+                        ),
+                        onPressed: () {}),
                   ),
                   Row(
                     crossAxisAlignment: CrossAxisAlignment.start,
                     children: [
                       Padding(
                         padding: const EdgeInsets.symmetric(horizontal: 5),
-                        child: Icon(FontAwesomeIcons.solidCircle, color: Colors.black, size: 8,),
+                        child: Icon(
+                          FontAwesomeIcons.solidCircle,
+                          color: Colors.black,
+                          size: 8,
+                        ),
                       ),
                       Padding(
                         padding: const EdgeInsets.symmetric(horizontal: 5),
-                        child: Icon(FontAwesomeIcons.solidCircle, color: Colors.black, size: 8,),
+                        child: Icon(
+                          FontAwesomeIcons.solidCircle,
+                          color: Colors.black,
+                          size: 8,
+                        ),
                       ),
                       Padding(
                         padding: const EdgeInsets.symmetric(horizontal: 5),
-                        child: Icon(FontAwesomeIcons.solidCircle, color: Colors.black, size: 8,),
+                        child: Icon(
+                          FontAwesomeIcons.solidCircle,
+                          color: Colors.black,
+                          size: 8,
+                        ),
                       ),
                       Padding(
                         padding: const EdgeInsets.symmetric(horizontal: 5),
-                        child: Icon(FontAwesomeIcons.solidCircle, color: Colors.black, size: 8,),
-                      ),Padding(
+                        child: Icon(
+                          FontAwesomeIcons.solidCircle,
+                          color: Colors.black,
+                          size: 8,
+                        ),
+                      ),
+                      Padding(
                         padding: const EdgeInsets.symmetric(horizontal: 5),
-                        child: Icon(FontAwesomeIcons.solidCircle, color: Colors.black, size: 8,),
-                      ),Padding(
+                        child: Icon(
+                          FontAwesomeIcons.solidCircle,
+                          color: Colors.black,
+                          size: 8,
+                        ),
+                      ),
+                      Padding(
                         padding: const EdgeInsets.symmetric(horizontal: 5),
-                        child: Icon(FontAwesomeIcons.solidCircle, color: Colors.black, size: 8,),
+                        child: Icon(
+                          FontAwesomeIcons.solidCircle,
+                          color: Colors.black,
+                          size: 8,
+                        ),
                       ),
                     ],
                   ),
                   IconButton(
-                      icon: FaIcon(FontAwesomeIcons.lowVision, color: Colors.green, size: 14,),
-                      onPressed: () {}
-                  ),
+                      icon: FaIcon(
+                        FontAwesomeIcons.lowVision,
+                        color: Colors.green,
+                        size: 14,
+                      ),
+                      onPressed: () {}),
                 ],
               ),
             ),
-            SizedBox(height: 10,),
-            Text("Confirmed Password",
+            SizedBox(
+              height: 10,
+            ),
+            Text(
+              "Confirmed Password",
               style: TextStyle(
                 color: Colors.grey,
                 fontSize: 12,
@@ -208,8 +283,8 @@ class _PasswordState extends State<Password> {
             ),
             SizedBox(height: 15),
             Container(
-              height: MediaQuery.of(context).size.height* .06,
-              width: MediaQuery.of(context).size.width* .95,
+              height: MediaQuery.of(context).size.height * .06,
+              width: MediaQuery.of(context).size.width * .95,
               decoration: BoxDecoration(
                 color: Colors.white,
                 borderRadius: BorderRadius.only(
@@ -233,47 +308,79 @@ class _PasswordState extends State<Password> {
                   Transform.rotate(
                     angle: 60,
                     child: IconButton(
-                        icon: FaIcon(FontAwesomeIcons.key, color: Colors.black, size: 13,),
-                        onPressed: () {}
-                    ),
+                        icon: FaIcon(
+                          FontAwesomeIcons.key,
+                          color: Colors.black,
+                          size: 13,
+                        ),
+                        onPressed: () {}),
                   ),
                   Row(
                     crossAxisAlignment: CrossAxisAlignment.start,
                     children: [
                       Padding(
                         padding: const EdgeInsets.symmetric(horizontal: 4),
-                        child: Icon(FontAwesomeIcons.solidCircle, color: Colors.black, size: 8,),
+                        child: Icon(
+                          FontAwesomeIcons.solidCircle,
+                          color: Colors.black,
+                          size: 8,
+                        ),
                       ),
                       Padding(
                         padding: const EdgeInsets.symmetric(horizontal: 5),
-                        child: Icon(FontAwesomeIcons.solidCircle, color: Colors.black, size: 8,),
+                        child: Icon(
+                          FontAwesomeIcons.solidCircle,
+                          color: Colors.black,
+                          size: 8,
+                        ),
                       ),
                       Padding(
                         padding: const EdgeInsets.symmetric(horizontal: 5),
-                        child: Icon(FontAwesomeIcons.solidCircle, color: Colors.black, size: 8,),
+                        child: Icon(
+                          FontAwesomeIcons.solidCircle,
+                          color: Colors.black,
+                          size: 8,
+                        ),
                       ),
                       Padding(
                         padding: const EdgeInsets.symmetric(horizontal: 5),
-                        child: Icon(FontAwesomeIcons.solidCircle, color: Colors.black, size: 8,),
+                        child: Icon(
+                          FontAwesomeIcons.solidCircle,
+                          color: Colors.black,
+                          size: 8,
+                        ),
                       ),
                       Padding(
                         padding: const EdgeInsets.symmetric(horizontal: 5),
-                        child: Icon(FontAwesomeIcons.solidCircle, color: Colors.black, size: 8,),
+                        child: Icon(
+                          FontAwesomeIcons.solidCircle,
+                          color: Colors.black,
+                          size: 8,
+                        ),
                       ),
                       Padding(
                         padding: const EdgeInsets.symmetric(horizontal: 5),
-                        child: Icon(FontAwesomeIcons.solidCircle, color: Colors.black, size: 8,),
+                        child: Icon(
+                          FontAwesomeIcons.solidCircle,
+                          color: Colors.black,
+                          size: 8,
+                        ),
                       ),
                     ],
                   ),
                   IconButton(
-                      icon: FaIcon(FontAwesomeIcons.lowVision, color: Colors.green, size: 14,),
-                      onPressed: () {}
-                  ),
+                      icon: FaIcon(
+                        FontAwesomeIcons.lowVision,
+                        color: Colors.green,
+                        size: 14,
+                      ),
+                      onPressed: () {}),
                 ],
               ),
             ),
-            SizedBox(height: 20,),
+            SizedBox(
+              height: 20,
+            ),
             Center(
               child: InkWell(
                 onTap: () {
@@ -300,13 +407,15 @@ class _PasswordState extends State<Password> {
                     ],
                   ),
                   child: Padding(
-                    padding: const EdgeInsets.symmetric(horizontal: 90,vertical: 10),
-                    child: Text('Update',
-                    style: TextStyle(
-                      fontWeight: FontWeight.bold,
-                       fontSize: 10,
-                      color: Colors.white,
-                    ),
+                    padding: const EdgeInsets.symmetric(
+                        horizontal: 90, vertical: 10),
+                    child: Text(
+                      'Update',
+                      style: TextStyle(
+                        fontWeight: FontWeight.bold,
+                        fontSize: 10,
+                        color: Colors.white,
+                      ),
                     ),
                   ),
                 ),

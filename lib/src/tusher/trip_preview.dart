@@ -2,7 +2,6 @@ import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:my_ride/src/tusher/my_trip.dart';
 import 'package:my_ride/src/tusher/settings.dart';
-import 'dart:math' as math;
 
 class Trip1 extends StatefulWidget {
   //const TripPreview({Key? key}) : super(key: key);
@@ -21,7 +20,8 @@ class _Trip1State extends State<Trip1> {
         backgroundColor: Color(0xffcfcfc),
         leading: GestureDetector(
           onTap: () {
-            Navigator.push(context, MaterialPageRoute(builder: (context) => Trip()));
+            Navigator.push(
+                context, MaterialPageRoute(builder: (context) => Trip()));
           },
           child: const Padding(
             padding: EdgeInsets.symmetric(horizontal: 10),

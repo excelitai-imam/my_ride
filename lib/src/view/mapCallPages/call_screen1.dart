@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:get/get.dart';
 
 class callscreen extends StatelessWidget {
   @override
@@ -19,7 +18,7 @@ class callscreen extends StatelessWidget {
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
                     InkWell(
-                      onTap: (){
+                      onTap: () {
                         Navigator.pop(context);
                       },
                       child: CircleAvatar(
@@ -46,8 +45,8 @@ class callscreen extends StatelessWidget {
                       ),
                     ),
                     Padding(
-                      padding:
-                      const EdgeInsets.symmetric(horizontal: 105, vertical: 5),
+                      padding: const EdgeInsets.symmetric(
+                          horizontal: 105, vertical: 5),
                       child: Text(
                         'Roronoa Zoro',
                         style: TextStyle(
@@ -57,8 +56,8 @@ class callscreen extends StatelessWidget {
                       ),
                     ),
                     Padding(
-                      padding:
-                      const EdgeInsets.symmetric(horizontal: 130, vertical: 5),
+                      padding: const EdgeInsets.symmetric(
+                          horizontal: 130, vertical: 5),
                       child: Text(
                         '05:00 minutes',
                         style: TextStyle(
@@ -67,97 +66,16 @@ class callscreen extends StatelessWidget {
                         ),
                       ),
                     ),
-
                   ],
                 ),
               ),
               Positioned(
                 bottom: 100,
                 child: Container(
-                  width: MediaQuery.of(context).size.width*.7,
+                  width: MediaQuery.of(context).size.width * .7,
                   child: Row(
                     mainAxisAlignment: MainAxisAlignment.spaceBetween,
                     children: [
-                    Column(
-                      crossAxisAlignment: CrossAxisAlignment.start,
-                      children: [
-                        Container(
-                        width: 50,
-                        height: 50,
-                        decoration: BoxDecoration(
-                          // Circle shape
-                            shape: BoxShape.circle,
-                            color: Colors.black,
-                            // The border you want
-                            border: new Border.all(
-                              width: 2.0,
-                              color: Colors.white,
-                            ),
-                        ),
-                        child: Column(
-                          crossAxisAlignment: CrossAxisAlignment.center,
-                          mainAxisAlignment: MainAxisAlignment.center,
-                          children: [
-                            Center(
-                              child: Icon(
-                                      Icons.mic,
-                                      color: Colors.white,
-                                      size: 25,
-                                    ),
-                            ),
-                          ],
-                        ),
-
-                  ),
-                        Padding(
-                          padding: const EdgeInsets.symmetric(horizontal: 10,vertical: 10),
-                          child: Text("Mute",
-                            style: TextStyle(
-                              color: Colors.white,
-                            ),
-                          ),
-                        ),
-                      ],
-                    ),
-
-                      Column(
-                        crossAxisAlignment: CrossAxisAlignment.start,
-                        children: [
-                          Container(
-                            width: 50,
-                            height: 50,
-                            decoration: BoxDecoration(
-                              // Circle shape
-                              shape: BoxShape.circle,
-                              color: Colors.red,
-                            ),
-                            child: Column(
-                              crossAxisAlignment: CrossAxisAlignment.center,
-                              mainAxisAlignment: MainAxisAlignment.center,
-                              children: [
-                                Center(
-                            child: Image(
-                            image: AssetImage('assets/phone.png'),
-                        color: Colors.white,
-                      ),
-                ),
-                              ],
-                            ),
-
-                          ),
-                          Padding(
-                            padding: const EdgeInsets.symmetric(horizontal: 10,vertical: 10),
-                            child: Text("End",
-                              style: TextStyle(
-                                color: Colors.white,
-                              ),
-                            ),
-                          ),
-                        ],
-                      ),
-
-
-
                       Column(
                         crossAxisAlignment: CrossAxisAlignment.start,
                         children: [
@@ -179,18 +97,20 @@ class callscreen extends StatelessWidget {
                               mainAxisAlignment: MainAxisAlignment.center,
                               children: [
                                 Center(
-                            child: Image(
-                            image: AssetImage('assets/speaker.png'),
-                        color: Colors.white,
-                      ),
-                ),
-                               ],
+                                  child: Icon(
+                                    Icons.mic,
+                                    color: Colors.white,
+                                    size: 25,
+                                  ),
+                                ),
+                              ],
                             ),
-
                           ),
                           Padding(
-                            padding: const EdgeInsets.symmetric(horizontal: 10,vertical: 10),
-                            child: Text("Loud",
+                            padding: const EdgeInsets.symmetric(
+                                horizontal: 10, vertical: 10),
+                            child: Text(
+                              "Mute",
                               style: TextStyle(
                                 color: Colors.white,
                               ),
@@ -198,14 +118,87 @@ class callscreen extends StatelessWidget {
                           ),
                         ],
                       ),
-
-
-                    ],
+                      Column(
+                        crossAxisAlignment: CrossAxisAlignment.start,
+                        children: [
+                          Container(
+                            width: 50,
+                            height: 50,
+                            decoration: BoxDecoration(
+                              // Circle shape
+                              shape: BoxShape.circle,
+                              color: Colors.red,
+                            ),
+                            child: Column(
+                              crossAxisAlignment: CrossAxisAlignment.center,
+                              mainAxisAlignment: MainAxisAlignment.center,
+                              children: [
+                                Center(
+                                  child: Image(
+                                    image: AssetImage('assets/phone.png'),
+                                    color: Colors.white,
+                                  ),
+                                ),
+                              ],
+                            ),
+                          ),
+                          Padding(
+                            padding: const EdgeInsets.symmetric(
+                                horizontal: 10, vertical: 10),
+                            child: Text(
+                              "End",
+                              style: TextStyle(
+                                color: Colors.white,
+                              ),
+                            ),
+                          ),
+                        ],
                       ),
-
-
+                      Column(
+                        crossAxisAlignment: CrossAxisAlignment.start,
+                        children: [
+                          Container(
+                            width: 50,
+                            height: 50,
+                            decoration: BoxDecoration(
+                              // Circle shape
+                              shape: BoxShape.circle,
+                              color: Colors.black,
+                              // The border you want
+                              border: new Border.all(
+                                width: 2.0,
+                                color: Colors.white,
+                              ),
+                            ),
+                            child: Column(
+                              crossAxisAlignment: CrossAxisAlignment.center,
+                              mainAxisAlignment: MainAxisAlignment.center,
+                              children: [
+                                Center(
+                                  child: Image(
+                                    image: AssetImage('assets/speaker.png'),
+                                    color: Colors.white,
+                                  ),
+                                ),
+                              ],
+                            ),
+                          ),
+                          Padding(
+                            padding: const EdgeInsets.symmetric(
+                                horizontal: 10, vertical: 10),
+                            child: Text(
+                              "Loud",
+                              style: TextStyle(
+                                color: Colors.white,
+                              ),
+                            ),
+                          ),
+                        ],
+                      ),
+                    ],
                   ),
                 ),
+              ),
             ],
           ),
         ),

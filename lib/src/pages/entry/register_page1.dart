@@ -63,7 +63,7 @@ class RegisterPage1 extends StatelessWidget {
                 SizedBox(height: kVerticalPadding / 2),
                 const TextField(
                   style: TextStyle(color: primaryFontColor),
-                  keyboardType: TextInputType.emailAddress,
+                  keyboardType: TextInputType.phone,
                   decoration: InputDecoration(
                     prefixIcon: Icon(
                       FontAwesomeIcons.flagUsa,

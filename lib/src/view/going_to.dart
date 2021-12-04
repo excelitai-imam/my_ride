@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:get/get_core/src/get_main.dart';
 import 'package:get/get_navigation/src/extension_navigation.dart';
+import 'package:my_ride/src/view/finish_ride.dart';
 import 'package:my_ride/src/view/show_Notifications.dart';
 
 class GoingTo extends StatelessWidget {
@@ -140,30 +140,31 @@ class GoingTo extends StatelessWidget {
                           //padding:EdgeInsets.all(20)
                         ),
                         onPressed: () {
-                          //Get.to(FinishRide());
-                          showDialog(
-                            context: context,
-                            builder: (BuildContext context) {
-                              return Theme(
-                                data: Theme.of(context).copyWith(
-                                  dialogBackgroundColor: Colors.transparent,
-                                ),
-                                child: AlertDialog(
-                                  //backgroundColor: Colors.red,
-                                  contentPadding: EdgeInsets.zero,
-                                  title: Center(
-                                    child: Text(""),
-                                  ),
-                                  content: Column(
-                                    mainAxisSize: MainAxisSize.min,
-                                    children: [
-                                      Report(),
-                                    ],
-                                  ),
-                                ),
-                              );
-                            },
-                          );
+                          Get.to(FinishRide());
+                          // showDialog(
+                          //   context: context,
+                          //   builder: (BuildContext context) {
+                          //     return Theme(
+                          //       data: Theme.of(context).copyWith(
+                          //         dialogBackgroundColor: Colors.transparent,
+                          //       ),
+                          //       child: AlertDialog(
+                          //         //backgroundColor: Colors.red,
+                          //         contentPadding: EdgeInsets.zero,
+                          //         title: Center(
+                          //           child: Text("sdggdg"),
+                          //         ),
+                          //         content:
+                          //             // Container(
+                          //             //   height: 100,
+                          //             //   width: 100,
+                          //             //   color: Colors.red,
+                          //             // ), //
+                          //             Report(),
+                          //       ),
+                          //     );
+                          //   },
+                          // );
                         },
                         child: Padding(
                           padding: const EdgeInsets.symmetric(horizontal: 10),

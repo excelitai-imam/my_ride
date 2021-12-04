@@ -1,7 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
-import 'package:google_maps_flutter/google_maps_flutter.dart';
-import 'package:dio/dio.dart';
 import 'package:my_ride/src/tusher/add_location.dart';
 import 'package:my_ride/src/tusher/dark%20mode.dart';
 
@@ -38,13 +36,18 @@ class _Location1State extends State<Location1> {
                       children: [
                         GestureDetector(
                           onTap: () {
-                            Navigator.push(context, MaterialPageRoute(builder: (context) => Dark()));
+                            Navigator.push(
+                                context,
+                                MaterialPageRoute(
+                                    builder: (context) => Dark()));
                           },
                           child: const Padding(
-                            padding: EdgeInsets.symmetric(horizontal: 10, vertical: 50),
+                            padding: EdgeInsets.symmetric(
+                                horizontal: 10, vertical: 50),
                             child: CircleAvatar(
                               backgroundColor: Color(0xfffe8550),
-                              child: Icon(Icons.arrow_back, color: Colors.white),
+                              child:
+                                  Icon(Icons.arrow_back, color: Colors.white),
                             ),
                           ),
                         ),

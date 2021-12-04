@@ -22,76 +22,79 @@ class NewPasswordPage extends StatelessWidget {
           ),
         ),
       ),
-      body: Container(
-        padding: EdgeInsets.symmetric(horizontal: kHorizontalPadding),
-        child: Column(
-          crossAxisAlignment: CrossAxisAlignment.start,
-          children: [
-            const LoginRegistrationHeader(
-              centerText: true,
-              title: "New Password",
-              subTitle: "Enter new password",
-            ),
-            SizedBox(height: kVerticalPadding),
-            const Text(
-              "New Password",
-              style: TextStyle(
-                color: Colors.grey,
-                fontSize: 12,
-                fontWeight: FontWeight.bold,
+      body: SingleChildScrollView(
+        reverse: true,
+        child: Container(
+          padding: EdgeInsets.symmetric(horizontal: kHorizontalPadding),
+          child: Column(
+            crossAxisAlignment: CrossAxisAlignment.start,
+            children: [
+              const LoginRegistrationHeader(
+                centerText: true,
+                title: "New Password",
+                subTitle: "Enter new password",
               ),
-            ),
-            SizedBox(height: kVerticalPadding / 2),
-            const TextField(
-              obscureText: true,
-              style: TextStyle(color: primaryFontColor),
-              keyboardType: TextInputType.text,
-              decoration: InputDecoration(
-                prefixIcon: Icon(Icons.vpn_key_sharp),
-                suffixIcon: Icon(
-                  FontAwesomeIcons.lowVision,
-                  color: Colors.green,
-                  size: 15,
+              SizedBox(height: kVerticalPadding),
+              const Text(
+                "New Password",
+                style: TextStyle(
+                  color: Colors.grey,
+                  fontSize: 12,
+                  fontWeight: FontWeight.bold,
                 ),
-                //onPressed: () {},
-                labelText: 'Enter new password',
-                isCollapsed: true,
               ),
-            ),
-            SizedBox(height: kVerticalPadding),
-            const Text(
-              "Confirm Password",
-              style: TextStyle(
-                color: Colors.grey,
-                fontSize: 12,
-                fontWeight: FontWeight.bold,
-              ),
-            ),
-            SizedBox(height: kVerticalPadding / 2),
-            const TextField(
-              obscureText: true,
-              style: TextStyle(color: primaryFontColor),
-              keyboardType: TextInputType.text,
-              decoration: InputDecoration(
-                prefixIcon: Icon(Icons.vpn_key_sharp),
-                suffixIcon: Icon(
-                  FontAwesomeIcons.lowVision,
-                  color: Colors.green,
-                  size: 15,
+              SizedBox(height: kVerticalPadding / 2),
+              const TextField(
+                obscureText: true,
+                style: TextStyle(color: primaryFontColor),
+                keyboardType: TextInputType.text,
+                decoration: InputDecoration(
+                  prefixIcon: Icon(Icons.vpn_key_sharp),
+                  suffixIcon: Icon(
+                    FontAwesomeIcons.lowVision,
+                    color: Colors.green,
+                    size: 15,
+                  ),
+                  //onPressed: () {},
+                  labelText: 'Enter new password',
+                  isCollapsed: true,
                 ),
-                //onPressed: () {},
-                labelText: 'Confirm Password',
-                isCollapsed: true,
               ),
-            ),
-            SizedBox(height: kVerticalPadding),
-            ElevatedButton(
-              onPressed: () {
-                Navigator.pushReplacementNamed(context, kRouteLogin1);
-              },
-              child: const Text("Save"),
-            ),
-          ],
+              SizedBox(height: kVerticalPadding),
+              const Text(
+                "Confirm Password",
+                style: TextStyle(
+                  color: Colors.grey,
+                  fontSize: 12,
+                  fontWeight: FontWeight.bold,
+                ),
+              ),
+              SizedBox(height: kVerticalPadding / 2),
+              const TextField(
+                obscureText: true,
+                style: TextStyle(color: primaryFontColor),
+                keyboardType: TextInputType.text,
+                decoration: InputDecoration(
+                  prefixIcon: Icon(Icons.vpn_key_sharp),
+                  suffixIcon: Icon(
+                    FontAwesomeIcons.lowVision,
+                    color: Colors.green,
+                    size: 15,
+                  ),
+                  //onPressed: () {},
+                  labelText: 'Confirm Password',
+                  isCollapsed: true,
+                ),
+              ),
+              SizedBox(height: kVerticalPadding),
+              ElevatedButton(
+                onPressed: () {
+                  Navigator.pushReplacementNamed(context, kRouteLogin1);
+                },
+                child: const Text("Save"),
+              ),
+            ],
+          ),
         ),
       ),
     );

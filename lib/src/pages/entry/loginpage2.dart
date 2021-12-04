@@ -23,6 +23,7 @@ class LoginPage2 extends StatelessWidget {
         ),
       ),
       body: SingleChildScrollView(
+        reverse: true,
         child: Container(
           padding: EdgeInsets.symmetric(horizontal: kHorizontalPadding),
           child: Padding(
@@ -54,7 +55,6 @@ class LoginPage2 extends StatelessWidget {
                     ),
                   ],
                 ),
-
                 const Text(
                   "Phone Number",
                   style: TextStyle(
@@ -64,15 +64,6 @@ class LoginPage2 extends StatelessWidget {
                   ),
                 ),
                 SizedBox(height: kVerticalPadding / 2),
-                // const TextField(
-                //   style: TextStyle(color: primaryFontColor),
-                //   keyboardType: TextInputType.phone,
-                //   decoration: InputDecoration(
-                //     prefixIcon: Icon(Icons.arrow_drop_down),
-                //     labelText: '+880 Enter your number',
-                //     isCollapsed: true,
-                //   ),
-                // ),
                 Container(
                   height: MediaQuery.of(context).size.height * .06,
                   width: MediaQuery.of(context).size.width * .95,
@@ -162,15 +153,6 @@ class LoginPage2 extends StatelessWidget {
                     isCollapsed: true,
                   ),
                 ),
-                // SizedBox(height: kVerticalPadding),
-                // TextFormField(
-                //   style: const TextStyle(color: primaryFontColor),
-                //   obscureText: true,
-                //   decoration: const InputDecoration(
-                //     labelText: 'Password',
-                //     isCollapsed: true,
-                //   ),
-                // ),
                 SizedBox(height: kVerticalPadding / 2),
                 GestureDetector(
                   onTap: () {
@@ -203,22 +185,11 @@ class LoginPage2 extends StatelessWidget {
                   child: const Text("Login"),
                 ),
                 SizedBox(height: kVerticalPadding),
-
-                // const Expanded(child: SizedBox.shrink()),
-                // LoginRegisterFooter(
-                //   question: 'Don\'t have an Account?',
-                //   actionText: ' Sign Up',
-                //   action: () {
-                //     Navigator.pushReplacementNamed(context, kRouteLoginOtp);
-                //   },
-                // ),
-                // SizedBox(height: kVerticalPadding),
               ],
             ),
           ),
         ),
       ),
-      //body: LoginOtpPage(),
     );
   }
 }

@@ -1,7 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
-import 'package:google_maps_flutter/google_maps_flutter.dart';
-import 'package:dio/dio.dart';
 import 'package:my_ride/src/tusher/saved%20location.dart';
 
 class Location2 extends StatefulWidget {
@@ -37,13 +35,18 @@ class _Location2State extends State<Location2> {
                       children: [
                         GestureDetector(
                           onTap: () {
-                            Navigator.push(context, MaterialPageRoute(builder: (context) => Location()));
+                            Navigator.push(
+                                context,
+                                MaterialPageRoute(
+                                    builder: (context) => Location()));
                           },
                           child: const Padding(
-                            padding: EdgeInsets.symmetric(horizontal: 10, vertical: 50),
+                            padding: EdgeInsets.symmetric(
+                                horizontal: 10, vertical: 50),
                             child: CircleAvatar(
                               backgroundColor: Color(0xfffe8550),
-                              child: Icon(Icons.arrow_back, color: Colors.white),
+                              child:
+                                  Icon(Icons.arrow_back, color: Colors.white),
                             ),
                           ),
                         ),
@@ -225,7 +228,10 @@ class _Location2State extends State<Location2> {
                           ),
                         ),
                         onPressed: () {
-                          Navigator.push(context, MaterialPageRoute(builder: (context) => Location()));
+                          Navigator.push(
+                              context,
+                              MaterialPageRoute(
+                                  builder: (context) => Location()));
                         },
                         child: Column(
                           children: [

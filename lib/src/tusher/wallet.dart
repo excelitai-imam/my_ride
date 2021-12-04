@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:my_ride/src/tusher/wallet2.dart';
-import 'package:my_ride/src/view/find_your_ride_page.dart';
 
 class Wallet1 extends StatefulWidget {
   const Wallet1({Key? key}) : super(key: key);
