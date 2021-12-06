@@ -145,6 +145,14 @@ class PassResetPage extends StatelessWidget {
                 Navigator.pushReplacementNamed(context, kRouteRestePassOtp);
               },
               child: const Text("Get OTP"),
+              style: ElevatedButton.styleFrom(
+                primary: mainColor,
+                shape: RoundedRectangleBorder(
+                  borderRadius: BorderRadius.circular(50),
+                ),
+                padding: EdgeInsets.all(kButtonPadding),
+                minimumSize: Size(double.infinity, kButtonPadding),
+              ),
             ),
           ],
         ),

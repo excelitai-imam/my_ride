@@ -61,10 +61,24 @@ class RegisterPage1 extends StatelessWidget {
                   ),
                 ),
                 SizedBox(height: kVerticalPadding / 2),
-                const TextField(
+                TextField(
                   style: TextStyle(color: primaryFontColor),
                   keyboardType: TextInputType.phone,
                   decoration: InputDecoration(
+                    fillColor: placeholderColor,
+                    filled: true,
+                    border: const OutlineInputBorder(
+                      borderRadius: BorderRadius.all(Radius.circular(50.0)),
+                      borderSide: BorderSide.none,
+                    ),
+                    floatingLabelStyle: TextStyle(
+                      color: secondaryFontColor,
+                      height: 10.h,
+                    ),
+                    contentPadding: EdgeInsets.symmetric(
+                      vertical: kTextFieldPadding,
+                      horizontal: kTextFieldPadding * 2,
+                    ),
                     prefixIcon: Icon(
                       FontAwesomeIcons.flagUsa,
                       color: Colors.black,
@@ -92,6 +106,14 @@ class RegisterPage1 extends StatelessWidget {
                     Navigator.pushReplacementNamed(context, kRouteRegister2);
                   },
                   child: const Text("Next"),
+                  style: ElevatedButton.styleFrom(
+                    primary: mainColor,
+                    shape: RoundedRectangleBorder(
+                      borderRadius: BorderRadius.circular(50),
+                    ),
+                    padding: EdgeInsets.all(kButtonPadding),
+                    minimumSize: Size(double.infinity, kButtonPadding),
+                  ),
                 ),
                 SizedBox(height: kVerticalPadding),
                 SizedBox(height: kVerticalPadding),
@@ -106,18 +128,6 @@ class RegisterPage1 extends StatelessWidget {
                 SizedBox(height: kVerticalPadding),
                 ElevatedButton.icon(
                   onPressed: () {},
-                  icon: const Icon(
-                    FontAwesomeIcons.facebookF,
-                  ),
-                  label: const Text('Facebook'),
-                  style: ElevatedButton.styleFrom(
-                    primary: const Color(0xff03b6fc),
-                    padding: EdgeInsets.all(kButtonIconPadding),
-                  ),
-                ),
-                SizedBox(height: kVerticalPadding),
-                ElevatedButton.icon(
-                  onPressed: () {},
                   icon: Image.asset(
                     'assets/g.png',
                     height: 25,
@@ -127,9 +137,33 @@ class RegisterPage1 extends StatelessWidget {
                     ' Google',
                     style: TextStyle(color: Colors.black),
                   ),
+                  // style: ElevatedButton.styleFrom(
+                  //   primary: const Color(0xfff7faf9),
+                  //   padding: EdgeInsets.all(kButtonIconPadding),
+                  // ),
                   style: ElevatedButton.styleFrom(
                     primary: const Color(0xfff7faf9),
                     padding: EdgeInsets.all(kButtonIconPadding),
+                    shape: RoundedRectangleBorder(
+                      borderRadius: BorderRadius.circular(50),
+                    ),
+                    minimumSize: Size(double.infinity, kButtonPadding),
+                  ),
+                ),
+                SizedBox(height: kVerticalPadding),
+                ElevatedButton.icon(
+                  onPressed: () {},
+                  icon: const Icon(
+                    FontAwesomeIcons.facebookF,
+                  ),
+                  label: const Text('Facebook'),
+                  style: ElevatedButton.styleFrom(
+                    primary: const Color(0xff03b6fc),
+                    padding: EdgeInsets.all(kButtonIconPadding),
+                    shape: RoundedRectangleBorder(
+                      borderRadius: BorderRadius.circular(50),
+                    ),
+                    minimumSize: Size(double.infinity, kButtonPadding),
                   ),
                 ),
                 SizedBox(height: kVerticalPadding),

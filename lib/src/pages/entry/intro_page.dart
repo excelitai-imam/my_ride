@@ -106,12 +106,20 @@ class _IntroPageState extends State<IntroPage>
                             duration: const Duration(milliseconds: 250),
                             curve: Curves.easeIn);
                       },
+                      // style: ElevatedButton.styleFrom(
+                      //   primary: mainColor,
+                      //   shape: RoundedRectangleBorder(
+                      //     borderRadius: BorderRadius.circular(40),
+                      //   ),
+                      //   padding: const EdgeInsets.all(15),
+                      // ),
                       style: ElevatedButton.styleFrom(
                         primary: mainColor,
                         shape: RoundedRectangleBorder(
-                          borderRadius: BorderRadius.circular(40),
+                          borderRadius: BorderRadius.circular(50),
                         ),
-                        padding: const EdgeInsets.all(15),
+                        padding: EdgeInsets.all(kButtonPadding),
+                        minimumSize: Size(double.infinity, kButtonPadding),
                       ),
                       child: const Text('Get Started')),
                 ),

@@ -18,18 +18,19 @@ class _CurrencyState extends State<Currency> {
       appBar: AppBar(
         elevation: 0,
         backgroundColor: Color(0xffcfcfc),
-         leading: GestureDetector(
-                  onTap: () {
-                    Navigator.push(context, MaterialPageRoute(builder: (context) => Notification1()));
-                  },
-                  child: const Padding(
-                    padding: EdgeInsets.symmetric(horizontal: 10),
-                    child: CircleAvatar(
-                      backgroundColor: Color(0xfffe8550),
-                      child: Icon(Icons.arrow_back, color: Colors.white),
-                    ),
-                  ),
-                ),
+        leading: GestureDetector(
+          onTap: () {
+            Navigator.push(context,
+                MaterialPageRoute(builder: (context) => Notification1()));
+          },
+          child: const Padding(
+            padding: EdgeInsets.symmetric(horizontal: 10),
+            child: CircleAvatar(
+              backgroundColor: Color(0xfffe8550),
+              child: Icon(Icons.arrow_back, color: Colors.white),
+            ),
+          ),
+        ),
         title: Padding(
           padding: const EdgeInsets.symmetric(horizontal: 65),
           child: Text(

@@ -86,30 +86,72 @@ class ProfileSetupPage extends StatelessWidget {
               TextFormField(
                 style: const TextStyle(color: primaryFontColor),
                 keyboardType: TextInputType.text,
-                decoration: const InputDecoration(
+                decoration: InputDecoration(
                   labelText: 'Enter your full name',
                   prefixIcon: Icon(Icons.account_circle),
                   isCollapsed: true,
+                  fillColor: placeholderColor,
+                  filled: true,
+                  border: const OutlineInputBorder(
+                    borderRadius: BorderRadius.all(Radius.circular(50.0)),
+                    borderSide: BorderSide.none,
+                  ),
+                  floatingLabelStyle: TextStyle(
+                    color: secondaryFontColor,
+                    height: 10.h,
+                  ),
+                  contentPadding: EdgeInsets.symmetric(
+                    vertical: kTextFieldPadding,
+                    horizontal: kTextFieldPadding * 2,
+                  ),
                 ),
               ),
               SizedBox(height: kVerticalPadding),
               TextFormField(
                 style: const TextStyle(color: primaryFontColor),
                 keyboardType: TextInputType.number,
-                decoration: const InputDecoration(
+                decoration: InputDecoration(
                   labelText: 'Age',
                   prefixIcon: Icon(Icons.watch_later),
                   isCollapsed: true,
+                  fillColor: placeholderColor,
+                  filled: true,
+                  border: const OutlineInputBorder(
+                    borderRadius: BorderRadius.all(Radius.circular(50.0)),
+                    borderSide: BorderSide.none,
+                  ),
+                  floatingLabelStyle: TextStyle(
+                    color: secondaryFontColor,
+                    height: 10.h,
+                  ),
+                  contentPadding: EdgeInsets.symmetric(
+                    vertical: kTextFieldPadding,
+                    horizontal: kTextFieldPadding * 2,
+                  ),
                 ),
               ),
               SizedBox(height: kVerticalPadding),
               TextFormField(
                 style: const TextStyle(color: primaryFontColor),
                 keyboardType: TextInputType.emailAddress,
-                decoration: const InputDecoration(
+                decoration: InputDecoration(
                   labelText: 'Enter your Email address',
                   prefixIcon: Icon(Icons.mail),
                   isCollapsed: true,
+                  fillColor: placeholderColor,
+                  filled: true,
+                  border: const OutlineInputBorder(
+                    borderRadius: BorderRadius.all(Radius.circular(50.0)),
+                    borderSide: BorderSide.none,
+                  ),
+                  floatingLabelStyle: TextStyle(
+                    color: secondaryFontColor,
+                    height: 10.h,
+                  ),
+                  contentPadding: EdgeInsets.symmetric(
+                    vertical: kTextFieldPadding,
+                    horizontal: kTextFieldPadding * 2,
+                  ),
                 ),
               ),
               SizedBox(height: kVerticalPadding),
@@ -128,6 +170,14 @@ class ProfileSetupPage extends StatelessWidget {
                   Get.to(const MyHomePage());
                 },
                 child: const Text("Done"),
+                style: ElevatedButton.styleFrom(
+                  primary: mainColor,
+                  shape: RoundedRectangleBorder(
+                    borderRadius: BorderRadius.circular(50),
+                  ),
+                  padding: EdgeInsets.all(kButtonPadding),
+                  minimumSize: Size(double.infinity, kButtonPadding),
+                ),
               ),
             ],
           ),

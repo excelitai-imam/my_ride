@@ -122,6 +122,14 @@ class _LoginOtpPageState extends State<LoginOtpPage> {
                 );
               },
               child: const Text("Next"),
+              style: ElevatedButton.styleFrom(
+                primary: mainColor,
+                shape: RoundedRectangleBorder(
+                  borderRadius: BorderRadius.circular(50),
+                ),
+                padding: EdgeInsets.all(kButtonPadding),
+                minimumSize: Size(double.infinity, kButtonPadding),
+              ),
             ),
             SizedBox(height: kVerticalPadding),
           ],
@@ -146,8 +154,15 @@ class _LoginOtpPageState extends State<LoginOtpPage> {
           fontSize: 32,
           color: primaryFontColor,
         ),
+
         onChanged: onChanged,
         decoration: InputDecoration(
+          fillColor: placeholderColor,
+          filled: true,
+          floatingLabelStyle: TextStyle(
+            color: secondaryFontColor,
+            height: 10.h,
+          ),
           border: OutlineInputBorder(
             borderRadius: BorderRadius.circular(30),
             borderSide: BorderSide.none,

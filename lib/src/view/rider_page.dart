@@ -5,7 +5,6 @@ import 'package:get/get_navigation/src/extension_navigation.dart';
 import 'package:my_ride/src/view/going_to.dart';
 import 'package:my_ride/src/view/mapCallPages/call_screen1.dart';
 import 'package:my_ride/src/view/mapCallPages/massage_screen.dart';
-import 'package:my_ride/src/view/show_Notifications.dart';
 
 //import 'call';
 class Rider extends StatelessWidget {

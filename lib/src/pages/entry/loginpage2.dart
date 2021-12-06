@@ -137,11 +137,25 @@ class LoginPage2 extends StatelessWidget {
                   ),
                 ),
                 SizedBox(height: kVerticalPadding / 2),
-                const TextField(
+                TextField(
                   obscureText: true,
                   style: TextStyle(color: primaryFontColor),
                   keyboardType: TextInputType.text,
                   decoration: InputDecoration(
+                    fillColor: placeholderColor,
+                    filled: true,
+                    border: const OutlineInputBorder(
+                      borderRadius: BorderRadius.all(Radius.circular(50.0)),
+                      borderSide: BorderSide.none,
+                    ),
+                    floatingLabelStyle: TextStyle(
+                      color: secondaryFontColor,
+                      height: 10.h,
+                    ),
+                    contentPadding: EdgeInsets.symmetric(
+                      vertical: kTextFieldPadding,
+                      horizontal: kTextFieldPadding * 2,
+                    ),
                     prefixIcon: Icon(Icons.vpn_key_sharp),
                     suffixIcon: Icon(
                       FontAwesomeIcons.lowVision,
@@ -183,6 +197,14 @@ class LoginPage2 extends StatelessWidget {
                     Navigator.pushReplacementNamed(context, kRouteLoginOtp);
                   },
                   child: const Text("Login"),
+                  style: ElevatedButton.styleFrom(
+                    primary: mainColor,
+                    shape: RoundedRectangleBorder(
+                      borderRadius: BorderRadius.circular(50),
+                    ),
+                    padding: EdgeInsets.all(kButtonPadding),
+                    minimumSize: Size(double.infinity, kButtonPadding),
+                  ),
                 ),
                 SizedBox(height: kVerticalPadding),
               ],

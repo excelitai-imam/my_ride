@@ -22,45 +22,45 @@ class MyApp extends StatelessWidget {
         theme: ThemeData(
           scaffoldBackgroundColor: Colors.white,
           primarySwatch: mainColorSwatch,
-          elevatedButtonTheme: ElevatedButtonThemeData(
-            style: ElevatedButton.styleFrom(
-              primary: mainColor,
-              shape: RoundedRectangleBorder(
-                borderRadius: BorderRadius.circular(50),
-              ),
-              padding: EdgeInsets.all(kButtonPadding),
-              minimumSize: Size(double.infinity, kButtonPadding),
-            ),
-          ),
-          outlinedButtonTheme: OutlinedButtonThemeData(
-            style: ElevatedButton.styleFrom(
-              primary: mainColor,
-              shape: RoundedRectangleBorder(
-                borderRadius: BorderRadius.circular(50),
-              ),
-              side: const BorderSide(
-                color: mainColor,
-              ),
-              minimumSize: Size(double.infinity, kButtonPadding),
-              padding: EdgeInsets.all(kButtonPadding),
-            ),
-          ),
-          inputDecorationTheme: InputDecorationTheme(
-            fillColor: placeholderColor,
-            filled: true,
-            border: const OutlineInputBorder(
-              borderRadius: BorderRadius.all(Radius.circular(50.0)),
-              borderSide: BorderSide.none,
-            ),
-            floatingLabelStyle: TextStyle(
-              color: secondaryFontColor,
-              height: 10.h,
-            ),
-            contentPadding: EdgeInsets.symmetric(
-              vertical: kTextFieldPadding,
-              horizontal: kTextFieldPadding * 2,
-            ),
-          ),
+          // elevatedButtonTheme: ElevatedButtonThemeData(
+          //   style: ElevatedButton.styleFrom(
+          //     primary: mainColor,
+          //     shape: RoundedRectangleBorder(
+          //       borderRadius: BorderRadius.circular(50),
+          //     ),
+          //     padding: EdgeInsets.all(kButtonPadding),
+          //     minimumSize: Size(double.infinity, kButtonPadding),
+          //   ),
+          // ),
+          // outlinedButtonTheme: OutlinedButtonThemeData(
+          //   style: ElevatedButton.styleFrom(
+          //     primary: mainColor,
+          //     shape: RoundedRectangleBorder(
+          //       borderRadius: BorderRadius.circular(50),
+          //     ),
+          //     side: const BorderSide(
+          //       color: mainColor,
+          //     ),
+          //     minimumSize: Size(double.infinity, kButtonPadding),
+          //     padding: EdgeInsets.all(kButtonPadding),
+          //   ),
+          // ),
+          // inputDecorationTheme: InputDecorationTheme(
+          //   fillColor: placeholderColor,
+          //   filled: true,
+          //   border: const OutlineInputBorder(
+          //     borderRadius: BorderRadius.all(Radius.circular(50.0)),
+          //     borderSide: BorderSide.none,
+          //   ),
+          //   floatingLabelStyle: TextStyle(
+          //     color: secondaryFontColor,
+          //     height: 10.h,
+          //   ),
+          //   contentPadding: EdgeInsets.symmetric(
+          //     vertical: kTextFieldPadding,
+          //     horizontal: kTextFieldPadding * 2,
+          //   ),
+          // ),
         ),
         routes: {
           kRouteRoot: (context) => const SplashPage(),
